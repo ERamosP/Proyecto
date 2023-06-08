@@ -8,11 +8,24 @@ namespace Entidades
 {
     public class clsPalabra
     {
-        #region Propiedades
+        #region atributos privados
 
-        public int id { get; set; }
+        private int _id;
+        private string _nombre;
 
-        public string nombre { get; set; }
+        #region Propiedades publicos
+
+        public int id 
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public string nombre 
+        {
+            get { return _nombre; }
+            set { _nombre = value; }
+        }
 
 
         #endregion
