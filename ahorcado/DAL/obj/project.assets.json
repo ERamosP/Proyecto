@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\evasa\\Escritorio\\3Eva\\Interfaces\\ahorcado\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Interfaces\\ahorcado\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\evasa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Interfaces\\ahorcado\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
