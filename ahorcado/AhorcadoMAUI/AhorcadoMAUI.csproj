@@ -49,7 +49,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< Updated upstream
 	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
+=======
+	  <None Remove="Resources\Images\background.jpg" />
+	  <None Remove="Resources\Images\yodaDep.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\MenuJuego.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SinglePlayer.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
+>>>>>>> Stashed changes
 	</ItemGroup>
 
 </Project>
