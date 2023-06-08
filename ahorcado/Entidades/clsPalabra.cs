@@ -13,6 +13,8 @@ namespace Entidades
         private int _id;
         private string _nombre;
 
+        #endregion
+
         #region Propiedades publicos
 
         public int id 
