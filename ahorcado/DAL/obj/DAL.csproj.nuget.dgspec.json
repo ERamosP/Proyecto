@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {}
+    "C:\\Ficheros\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {
+    "C:\\Ficheros\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Ficheros\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\evasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\DAL\\obj\\",
+        "projectPath": "C:\\Ficheros\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\godie\\.nuget\\packages\\",
+        "outputPath": "C:\\Ficheros\\Proyecto\\ahorcado\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\evasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\godie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -74,20 +74,20 @@
         }
       }
     },
-    "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+    "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\evasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\ahorcado\\Entidades\\obj\\",
+        "projectPath": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\godie\\.nuget\\packages\\",
+        "outputPath": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\evasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\godie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

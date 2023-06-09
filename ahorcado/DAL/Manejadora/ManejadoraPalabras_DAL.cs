@@ -16,24 +16,24 @@ namespace DAL.Manejadora
         /// Postcondicion: Devuelve una palabra de la BBDD;
         /// </summary>
         /// <returns></returns>
-        public clsPalabra getPalabraRandom() {
+        public static clsPalabra getPalabraRandom()
+        {
 
             clsConexion miConexion;
             SqlConnection conexion;
 
             SqlCommand miComando;
-            clsPalabra palabra=null;
+            clsPalabra palabra = null;
             SqlDataReader miLector;
 
             miConexion = new clsConexion();
-            conexion = new SqlConnection();
             miComando = new SqlCommand();
 
             try
             {
-                
+
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "SELECT TOP 1 id FROM palabra ORDER BY NEWID()";
+                miComando.CommandText = "SELECT TOP 1 id, nombre FROM palabra ORDER BY NEWID()";
                 miComando.Connection = conexion;
                 miLector = miComando.ExecuteReader();
 
@@ -45,8 +45,6 @@ namespace DAL.Manejadora
 
                         palabra.id = (int)miLector["id"];
                         palabra.nombre = (string)miLector["nombre"];
-
-
                     }
                 }
                 miLector.Close();
@@ -57,8 +55,8 @@ namespace DAL.Manejadora
                 throw ex;
             }
 
-            return palabra; 
-        
+            return palabra;
+
         }
     }
 
