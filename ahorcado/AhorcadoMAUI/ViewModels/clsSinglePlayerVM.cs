@@ -16,7 +16,7 @@ namespace AhorcadoMAUI.ViewModels
         private clsPalabra palabraParaAdivinar;
         private string adivinado; // ponemos un guión en cada posición
         private string lblAvisos;
-        private ObservableCollection<string> letrasSeleccionadas; //string o char??
+        private ObservableCollection<char> letrasSeleccionadas;
         private string inputJugador;
         private DelegateCommand enviarInputCommand;
         private string imagen;
@@ -35,7 +35,7 @@ namespace AhorcadoMAUI.ViewModels
         {
             get { return lblAvisos; }
         }
-        public ObservableCollection<string> LetrasSeleccionadas
+        public ObservableCollection<char> LetrasSeleccionadas
         {
             get { return letrasSeleccionadas; }
         }
@@ -66,8 +66,14 @@ namespace AhorcadoMAUI.ViewModels
         #endregion
 
         #region Commands
-
-
+        /// <summary>
+        /// Función del botón. Comprueba si el input del jugador se encuentra en la palabra a adivinar. 
+        /// Si se encuentra, desbloquea esas letras en la string adivinado.
+        /// </summary>
+        private void enviarInputCommand_Executed()
+        {
+            comprobarInput();
+        }
 
         /// <summary>
         /// Habilita o deshabilita el botón dependiendo de si el input del jugador es válido o no
@@ -96,9 +102,9 @@ namespace AhorcadoMAUI.ViewModels
             juegoTerminado = false;
             seHaAdivinadoLaPalabra = false; 
             //imagen = la que que tenga solo la horca
-            //palabraParaAdivinar = llamadita a la api 
+            palabraAleatoria();
             intentosRestantes = 5;
-            letrasSeleccionadas = new ObservableCollection<string>();
+            letrasSeleccionadas = new ObservableCollection<char>();
         }
 
         /// <summary>
@@ -116,6 +122,14 @@ namespace AhorcadoMAUI.ViewModels
         private void comprobarInput()
         {
 
+        }
+
+        /// <summary>
+        /// Método que realiza la llamada a la API y recibe una palabra aleatoria que hay que adivinar.
+        /// </summary>
+        private void palabraAleatoria()
+        {
+            //palabraParaAdivinar = llamada API
         }
         #endregion
     }

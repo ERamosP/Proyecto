@@ -1,1 +1,1 @@
-C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\AhorcadoMAUI.csproj;x64
+C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\AhorcadoMAUI\AhorcadoMAUI.csproj;x64
