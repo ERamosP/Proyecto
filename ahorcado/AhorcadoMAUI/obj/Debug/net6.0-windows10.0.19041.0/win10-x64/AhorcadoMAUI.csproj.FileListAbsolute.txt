@@ -1088,3 +1088,13 @@ C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6
 C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Entidades.dll
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Entidades.pdb
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a0a.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a1a.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a2a.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a3a.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a4a.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a5a.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\muerto.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\salvado.scale-100.png

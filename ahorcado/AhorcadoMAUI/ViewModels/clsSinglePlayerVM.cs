@@ -14,20 +14,20 @@ namespace AhorcadoMAUI.ViewModels
     {
         #region Atributos
         private clsPalabra palabraParaAdivinar;
-        private string adivinado; // ponemos un guión en cada posición
+        private StringBuilder adivinado; // ponemos un guión en cada posición
+        private int letrasRestantes;// cuando llegue a 0 se ha adivinado la palabra y acaba el juego. El jugador no necesita verlo.
         private string lblAvisos;
-        private ObservableCollection<char> letrasSeleccionadas;
+        private string letrasSeleccionadas;
         private string inputJugador;
         private DelegateCommand enviarInputCommand;
         private string imagen;
         private int intentosRestantes;
-        private bool seHaAdivinadoLaPalabra;
         private bool juegoTerminado;
 
         #endregion
 
         #region Propiedades
-        public string Adivinado
+        public StringBuilder Adivinado
         {
             get { return adivinado; }
         }
@@ -35,14 +35,23 @@ namespace AhorcadoMAUI.ViewModels
         {
             get { return lblAvisos; }
         }
-        public ObservableCollection<char> LetrasSeleccionadas
+        public string LetrasSeleccionadas
         {
             get { return letrasSeleccionadas; }
         }
         public string InputJugador
         {
             get { return inputJugador; }
-            set { inputJugador = value; }
+            set
+            {
+                if (value != null)
+                {
+                    inputJugador = value;
+                    NotifyPropertyChanged(nameof(InputJugador));
+                    EnviarInputCommand.RaiseCanExecuteChanged();
+                }
+                
+            }
         }
         public DelegateCommand EnviarInputCommand
         {
@@ -82,9 +91,8 @@ namespace AhorcadoMAUI.ViewModels
         private bool enviarInputCommand_CanExecute()
         {
             bool sePuedeEnviar = false;
-            Regex validCharacters = new Regex("^[a-z]$");
 
-            if (!String.IsNullOrEmpty(inputJugador) && inputJugador.Length==1 && validCharacters.IsMatch(inputJugador))
+            if (!string.IsNullOrEmpty(inputJugador) && inputJugador.Length == 1 && Regex.IsMatch(inputJugador, @"^[A-z]"))
             {
                 sePuedeEnviar = true;
             }
@@ -100,11 +108,11 @@ namespace AhorcadoMAUI.ViewModels
         private void crearPartida()
         {
             juegoTerminado = false;
-            seHaAdivinadoLaPalabra = false; 
-            //imagen = la que que tenga solo la horca
+            imagen = "a5a.png"; //imagen = la que que tenga solo la horca
             palabraAleatoria();
             intentosRestantes = 5;
-            letrasSeleccionadas = new ObservableCollection<char>();
+            letrasSeleccionadas = "";
+            enviarInputCommand = new DelegateCommand(enviarInputCommand_Executed, enviarInputCommand_CanExecute);
         }
 
         /// <summary>
@@ -112,7 +120,16 @@ namespace AhorcadoMAUI.ViewModels
         /// </summary>
         private void comprobarFin()
         {
+            if (intentosRestantes == 0)
+            {
+                lblAvisos = "has perdio";
+            }
+            else if (letrasRestantes == 0)
+            {
+                lblAvisos = $"has ganao y la palabra era {palabraParaAdivinar.nombre}";
+            }
 
+            NotifyPropertyChanged(nameof(LblAvisos));
         }
 
         /// <summary>
@@ -122,15 +139,74 @@ namespace AhorcadoMAUI.ViewModels
         private void comprobarInput()
         {
 
+            inputJugador = inputJugador.ToLower();
+
+            if(letrasSeleccionadas.Contains(inputJugador))
+            {
+                lblAvisos = "Deja de repetir letras";
+            }
+            else
+            {
+                if (palabraParaAdivinar.nombre.Contains(inputJugador))
+                {
+                    // cambiamos cada _ por la letra en adivinado
+                    for (int i = 0; i < adivinado.Length; i++)
+                    {
+                        if (palabraParaAdivinar.nombre[i].Equals(inputJugador[0]))
+                        {
+                            adivinado[i] = inputJugador[0];
+                        }
+                    }
+                    NotifyPropertyChanged("Adivinado");
+
+                }
+                else
+                {
+                    intentosRestantes--;
+                    letrasSeleccionadas += " " + inputJugador[0];
+                    actualizarImagen();
+                    NotifyPropertyChanged("IntentosRestantes");
+                    NotifyPropertyChanged("LetrasSeleccionadas");
+
+                }
+
+                comprobarFin();
+            }
+
+            NotifyPropertyChanged(nameof(LblAvisos));
+           
+            
         }
 
         /// <summary>
         /// Método que realiza la llamada a la API y recibe una palabra aleatoria que hay que adivinar.
+        /// Prepara la palabra a adivinar a base de guiones bajos
         /// </summary>
         private void palabraAleatoria()
         {
-            //palabraParaAdivinar = llamada API
+            palabraParaAdivinar = new clsPalabra(1, "cacahuete");
+
+            adivinado = new StringBuilder();
+
+            letrasRestantes = palabraParaAdivinar.nombre.Length;
+
+            for (int i = 0; i < palabraParaAdivinar.nombre.Length; i++)
+            {
+                adivinado.Append("*");
+            }
         }
+
+        /// <summary>
+        /// Método para actualizar la imagen en caso de error , la imagen será actualizada por la correspondiente en caso de que el jugador cometa un error.
+        /// </summary>
+        private void actualizarImagen() {
+
+            imagen = $"a{intentosRestantes}a.png";
+
+            NotifyPropertyChanged("Imagen");
+        
+        }
+
         #endregion
     }
 }

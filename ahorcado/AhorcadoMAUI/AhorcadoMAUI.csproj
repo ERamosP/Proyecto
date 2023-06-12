@@ -39,13 +39,24 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\a0a.png" />
+	  <None Remove="Resources\Images\a1a.png" />
+	  <None Remove="Resources\Images\a2a.png" />
+	  <None Remove="Resources\Images\a3a.png" />
+	  <None Remove="Resources\Images\a4a.png" />
+	  <None Remove="Resources\Images\a5a.png" />
+	  <None Remove="Resources\Images\background.jpg" />
+	  <None Remove="Resources\Images\muerto.png" />
+	  <None Remove="Resources\Images\salvado.png" />
 	</ItemGroup>
 
 	<ItemGroup>

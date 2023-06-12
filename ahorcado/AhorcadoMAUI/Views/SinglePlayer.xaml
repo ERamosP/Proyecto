@@ -18,26 +18,20 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Text="Número de intentos restantes :" TextColor="Red" HorizontalOptions="End" Margin="0,20,40,0" FontSize="20"/>
-            <Label Text="6" TextColor="Red" HorizontalOptions="End" Margin="0,20,20,0" FontSize="20"/>
+            <Label Text="{Binding IntentosRestantes}" TextColor="Red" HorizontalOptions="End" Margin="0,20,20,0" FontSize="20"/>
         </Grid>
-        
-        <Image Source="yodadep.png" WidthRequest="300" Margin="5"/>
 
-        <Label Text="Prueba" FontSize="20" TextColor="Black" HorizontalOptions="Center"/>
+        <Image Source="{Binding Imagen}" WidthRequest="300" Margin="0,70,0,0"/>
 
-        <Entry Placeholder="Inserte letra" BindingContext="{Binding InputJugador}" WidthRequest="150" Margin="10" FontSize="15"/>
+        <Label Text="{Binding Adivinado}" FontSize="20" TextColor="Black" HorizontalOptions="Center"/>
 
-        <Button Command="{Binding EnviarInputCommand}" Text="Comprobar letra" WidthRequest="150" Margin="10" BackgroundColor="Transparent" TextColor="Green" FontSize="15"/>
+        <Entry Placeholder="Inserte letra" Text="{Binding InputJugador}"  WidthRequest="150" Margin="10" FontSize="15" TextColor="Black"/>
 
-        <Label Text="Mensaje Error Prueba" TextColor="Red" HorizontalOptions="Center" FontSize="20" Margin="10"/>
+        <Button Command="{Binding EnviarInputCommand}" Text="Comprobar letra" WidthRequest="150" Margin="10" TextColor="Green"  FontSize="15"/>
 
-        <CollectionView ItemsSource="{Binding LetrasSeleccionadas}" HorizontalOptions="Center">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding}"/>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        <Label Text="{Binding LblAvisos}" TextColor="Red" HorizontalOptions="Center" FontSize="20" Margin="10"/>
+
+        <Label Text="{Binding LetrasSeleccionadas}"  TextColor="Black" HorizontalOptions="Center" FontSize="20"/>
 
     </VerticalStackLayout>
 </ContentPage>
