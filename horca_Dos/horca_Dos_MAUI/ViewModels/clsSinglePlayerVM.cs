@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using AhorcadoMAUI.ViewModels.Utilidades;
+using horca_Dos_MAUI.ViewModels.Utilidades;
 using Entidades;
 
-namespace AhorcadoMAUI.ViewModels
+namespace horca_Dos_MAUI.ViewModels
 {
     public class clsSinglePlayerVM : clsVMBase
     {

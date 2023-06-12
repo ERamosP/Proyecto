@@ -48,11 +48,11 @@ namespace AhorcadoMAUI.ViewModels
         {
             get { return enviarInputCommand; }
         }
-        private string Imagen
+        public string Imagen
         {
             get { return imagen; }
         }
-        private int IntentosRestantes
+        public int IntentosRestantes
         {
             get { return intentosRestantes; }
         }

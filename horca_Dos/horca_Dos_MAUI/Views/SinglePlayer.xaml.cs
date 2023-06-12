@@ -1,6 +1,6 @@
-namespace AhorcadoMAUI.Views;
+namespace horca_Dos_MAUI.Views;
 
-public partial class SinglePlayer : ContentPage
+public class SinglePlayer : ContentPage
 {
 	public SinglePlayer()
 	{

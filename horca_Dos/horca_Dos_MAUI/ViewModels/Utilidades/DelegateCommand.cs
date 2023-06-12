@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace AhorcadoMAUI.ViewModels.Utilidades
+namespace horca_Dos_MAUI.ViewModels.Utilidades
 {
     public class DelegateCommand : ICommand
     {

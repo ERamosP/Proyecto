@@ -1,6 +1,6 @@
-namespace AhorcadoMAUI.Views;
+namespace horca_Dos_MAUI.Views;
 
-public partial class MenuJuego : ContentPage
+public class MenuJuego : ContentPage
 {
 	public MenuJuego()
 	{

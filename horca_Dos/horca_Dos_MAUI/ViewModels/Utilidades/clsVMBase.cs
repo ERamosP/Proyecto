@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AhorcadoMAUI.ViewModels.Utilidades
+namespace horca_Dos_MAUI.ViewModels.Utilidades
 {
     public abstract class clsVMBase : INotifyPropertyChanged
     {

@@ -1,24 +1,154 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj": {}
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj": {
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj",
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj",
+        "projectName": "Entidades",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj",
         "projectName": "horca_Dos_MAUI",
-        "projectPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj",
-        "packagesPath": "C:\\Users\\evasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\evasa\\Escritorio\\3Eva\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\obj\\",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\horca_Dos_MAUI.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\horca_Dos_MAUI\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\evasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -36,19 +166,47 @@
         "frameworks": {
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj"
+              }
+            }
           },
           "net6.0-ios16.1": {
             "targetAlias": "net6.0-ios",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj"
+              }
+            }
           },
           "net6.0-maccatalyst16.1": {
             "targetAlias": "net6.0-maccatalyst",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj"
+              }
+            }
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\horca_Dos\\Entidades\\Entidades.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -63,12 +221,12 @@
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             }
           },
@@ -118,27 +276,27 @@
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.android",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Controls.Runtime.android",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Ref.android",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Runtime.android",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Ref.android",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Runtime.android",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             }
           ],
           "frameworkReferences": {
@@ -158,19 +316,19 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net6.0-ios16.1": {
           "targetAlias": "net6.0-ios",
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
@@ -193,35 +351,35 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.iOS.Ref",
-              "version": "[16.4.47, 16.4.47]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.iOS.Runtime.iossimulator-x64",
-              "version": "[16.4.47, 16.4.47]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.ios",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Controls.Runtime.ios",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Ref.ios",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Runtime.ios",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Ref.ios",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Runtime.ios",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             }
           ],
           "frameworkReferences": {
@@ -241,19 +399,19 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net6.0-maccatalyst16.1": {
           "targetAlias": "net6.0-maccatalyst",
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
@@ -277,35 +435,35 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.MacCatalyst.Ref",
-              "version": "[16.4.47, 16.4.47]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64",
-              "version": "[16.4.47, 16.4.47]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.maccatalyst",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Controls.Runtime.maccatalyst",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Ref.maccatalyst",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Runtime.maccatalyst",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Ref.maccatalyst",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Runtime.maccatalyst",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             }
           ],
           "frameworkReferences": {
@@ -325,19 +483,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.553, )",
+              "version": "[6.0.552, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Windows.SDK.BuildTools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.22000.194, )",
               "autoReferenced": true
             }
           },
@@ -359,27 +523,27 @@
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.win",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Controls.Runtime.win",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Ref.win",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Core.Runtime.win",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Ref.win",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.Maui.Essentials.Runtime.win",
-              "version": "[6.0.553, 6.0.553]"
+              "version": "[6.0.552, 6.0.552]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
@@ -411,7 +575,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
