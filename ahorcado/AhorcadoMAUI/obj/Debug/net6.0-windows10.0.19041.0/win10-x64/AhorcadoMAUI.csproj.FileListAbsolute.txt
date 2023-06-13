@@ -326,11 +326,6 @@ C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
-C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
-C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\AhorcadoMAUI.AssemblyInfoInputs.cache
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\AhorcadoMAUI.AssemblyInfo.cs
@@ -1101,3 +1096,6 @@ C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a5a.scale-100.png
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\muerto.scale-100.png
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\salvado.scale-100.png
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll

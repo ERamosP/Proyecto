@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using AhorcadoMAUI.Services;
 using AhorcadoMAUI.ViewModels.Utilidades;
 using AhorcadoMAUI.Views;
+using CommunityToolkit.Maui.Views;
 using Entidades;
 
 namespace AhorcadoMAUI.ViewModels
@@ -128,23 +130,32 @@ namespace AhorcadoMAUI.ViewModels
         /// <summary>
         /// Método que comprueba si se ha cumplido alguno de los requisitos necesarios para terminar la partida
         /// </summary>
-        private async void comprobarFin()
+        private async Task comprobarFin()
         {
             if (intentosRestantes == 0)
             {
                 imagen = "muerto.png";
+                var popup = new FinalPopUp(imagen);
 
-                await App.Current.MainPage.Navigation.PushAsync(new ViewResultado(imagen));
+                var result = await App.Current.MainPage.ShowPopupAsync(popup);
 
-                crearPartida();
+                if (result is bool boolResult)
+                {
+                    if (boolResult)
+                    {
+                        crearPartida();
+                    }
+                    else
+                    {
+                        Application.Current.Quit();
+                    }
+                }
 
             }
             else if (letrasRestantes == 0)
             {
                 imagen = "salvado.png";
-
-                await App.Current.MainPage.Navigation.PushAsync(new ViewResultado(imagen));
-
+                 
                 crearPartida();
             }
 
@@ -196,7 +207,7 @@ namespace AhorcadoMAUI.ViewModels
 
                 NotifyPropertyChanged("LetrasSeleccionadas");
 
-                
+
 
                 comprobarFin();
             }
@@ -209,9 +220,9 @@ namespace AhorcadoMAUI.ViewModels
         /// Método que realiza la llamada a la API y recibe una palabra aleatoria que hay que adivinar.
         /// Prepara la palabra a adivinar a base de guiones bajos
         /// </summary>
-        private void palabraAleatoria()
+        private async void palabraAleatoria()
         {
-            palabraParaAdivinar = new clsPalabra(1, "cacahuete");
+            palabraParaAdivinar = await palabraService.getPalabraAleatoria();
 
             adivinado = new StringBuilder();
 
@@ -234,6 +245,19 @@ namespace AhorcadoMAUI.ViewModels
 
             NotifyPropertyChanged("Imagen");
         
+        }
+
+        /// <summary>
+        /// Método que nos lleva a  la primera página o página raíz una vez pulsado la opción false
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void ReiniciarPrograma(object sender, EventArgs e)
+        {
+
+            await App.Current.MainPage.Navigation.PopToRootAsync();
+
+
         }
 
 
