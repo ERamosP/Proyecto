@@ -694,11 +694,6 @@ C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\background.scale-100.jpg
-C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
-C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\yodadep.scale-100.png
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\AhorcadoMAUI.AssemblyInfoInputs.cache
@@ -1098,3 +1093,11 @@ C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a5a.scale-100.png
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\muerto.scale-100.png
 C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\salvado.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a0a.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a1a.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a2a.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a3a.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a4a.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\a5a.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\muerto.scale-100.png
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\salvado.scale-100.png

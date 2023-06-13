@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AhorcadoMAUI.Views.ViewResultado"
+             BackgroundImageSource="background.jpg">
+    <VerticalStackLayout>
+        <Image x:Name="imagenFinal" HorizontalOptions="Center" WidthRequest="300"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Clicked="ReiniciarJuego" Text="Volver a jugar" WidthRequest="170" Grid.Column="0" Grid.Row="0" Margin="10" HeightRequest="60" HorizontalOptions="End" BackgroundColor="Transparent"/>
+            <Button Clicked="ReiniciarPrograma" Text="Volver al inicio" WidthRequest="170"  Grid.Row="0" Grid.Column="1" HeightRequest="60" Margin="10" HorizontalOptions="Start" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

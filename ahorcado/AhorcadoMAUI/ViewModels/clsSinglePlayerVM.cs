@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using AhorcadoMAUI.ViewModels.Utilidades;
+using AhorcadoMAUI.Views;
 using Entidades;
 
 namespace AhorcadoMAUI.ViewModels
@@ -107,29 +108,47 @@ namespace AhorcadoMAUI.ViewModels
         /// </summary>
         private void crearPartida()
         {
+
             juegoTerminado = false;
-            imagen = "a5a.png"; //imagen = la que que tenga solo la horca
-            palabraAleatoria();
             intentosRestantes = 5;
+            palabraAleatoria();
+            actualizarImagen();
             letrasSeleccionadas = "";
+            lblAvisos = "";
+            inputJugador =  "";
             enviarInputCommand = new DelegateCommand(enviarInputCommand_Executed, enviarInputCommand_CanExecute);
+
+            NotifyPropertyChanged("IntentosRestantes");
+            NotifyPropertyChanged("LetrasSeleccionadas");
+            NotifyPropertyChanged("LblAvisos");
+            NotifyPropertyChanged("InputJugador");
+            
         }
 
         /// <summary>
         /// Método que comprueba si se ha cumplido alguno de los requisitos necesarios para terminar la partida
         /// </summary>
-        private void comprobarFin()
+        private async void comprobarFin()
         {
             if (intentosRestantes == 0)
             {
-                lblAvisos = "has perdio";
+                imagen = "muerto.png";
+
+                await App.Current.MainPage.Navigation.PushAsync(new ViewResultado(imagen));
+
+                crearPartida();
+
             }
             else if (letrasRestantes == 0)
             {
-                lblAvisos = $"has ganao y la palabra era {palabraParaAdivinar.nombre}";
+                imagen = "salvado.png";
+
+                await App.Current.MainPage.Navigation.PushAsync(new ViewResultado(imagen));
+
+                crearPartida();
             }
 
-            NotifyPropertyChanged(nameof(LblAvisos));
+            
         }
 
         /// <summary>
@@ -147,6 +166,8 @@ namespace AhorcadoMAUI.ViewModels
             }
             else
             {
+                lblAvisos = "";
+
                 if (palabraParaAdivinar.nombre.Contains(inputJugador))
                 {
                     // cambiamos cada _ por la letra en adivinado
@@ -155,27 +176,33 @@ namespace AhorcadoMAUI.ViewModels
                         if (palabraParaAdivinar.nombre[i].Equals(inputJugador[0]))
                         {
                             adivinado[i] = inputJugador[0];
+                            letrasRestantes--;
                         }
                     }
-                    NotifyPropertyChanged("Adivinado");
-
+                    NotifyPropertyChanged("Adivinado"); 
                 }
                 else
                 {
                     intentosRestantes--;
-                    letrasSeleccionadas += " " + inputJugador[0];
                     actualizarImagen();
                     NotifyPropertyChanged("IntentosRestantes");
-                    NotifyPropertyChanged("LetrasSeleccionadas");
+                    
 
                 }
+
+                letrasSeleccionadas += " " + inputJugador[0];
+
+                
+
+                NotifyPropertyChanged("LetrasSeleccionadas");
+
+                
 
                 comprobarFin();
             }
 
-            NotifyPropertyChanged(nameof(LblAvisos));
-           
-            
+            NotifyPropertyChanged("LblAvisos");
+
         }
 
         /// <summary>
@@ -194,6 +221,8 @@ namespace AhorcadoMAUI.ViewModels
             {
                 adivinado.Append("*");
             }
+
+            NotifyPropertyChanged("Adivinado");
         }
 
         /// <summary>
@@ -206,6 +235,7 @@ namespace AhorcadoMAUI.ViewModels
             NotifyPropertyChanged("Imagen");
         
         }
+
 
         #endregion
     }
