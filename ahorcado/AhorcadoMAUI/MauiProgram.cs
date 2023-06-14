@@ -19,6 +19,10 @@ namespace AhorcadoMAUI
 
 
             builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddSingleton(AudioManager.Current);
             builder.Services.AddTransient<App>();
 
             return builder.Build();

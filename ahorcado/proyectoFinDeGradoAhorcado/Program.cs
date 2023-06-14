@@ -26,10 +26,8 @@ app.MapRazorPages();
 
 app.MapHub<ahorcadoHub>("/ahorcado"); //added
 
-/*No sé qué es esto 
- * 
- * app.MapControllerRoute(
+app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");*/
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

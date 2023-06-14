@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("AhorcadoMAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AhorcadoMAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS16.1")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS16.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("iOS14.2")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

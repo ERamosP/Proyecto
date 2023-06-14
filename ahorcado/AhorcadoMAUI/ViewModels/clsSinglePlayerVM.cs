@@ -10,6 +10,7 @@ using AhorcadoMAUI.ViewModels.Utilidades;
 using AhorcadoMAUI.Views;
 using CommunityToolkit.Maui.Views;
 using Entidades;
+using Plugin.Maui.Audio;
 
 namespace AhorcadoMAUI.ViewModels
 {
@@ -25,6 +26,17 @@ namespace AhorcadoMAUI.ViewModels
         private DelegateCommand enviarInputCommand;
         private string imagen;
         private int intentosRestantes;
+        private readonly IAudioManager audio;
+        private readonly IAudioManager audio2;
+        private readonly IAudioManager audio3;
+        private readonly IAudioManager audio4;
+        private readonly IAudioManager audio5;
+        IAudioPlayer musicaFondo;
+        IAudioPlayer aciertoAudio;
+        IAudioPlayer falloAudio;
+        IAudioPlayer victoriaAudio;
+        IAudioPlayer derrotaAudio;
+
         //private bool juegoTerminado; multiplayer
 
         #endregion
@@ -71,9 +83,22 @@ namespace AhorcadoMAUI.ViewModels
         #endregion
 
         #region Constructores
-        public clsSinglePlayerVM()
+        public clsSinglePlayerVM(IAudioManager audioManager, IAudioManager audioManager2, IAudioManager audioManager3, IAudioManager audioManager4, IAudioManager audioManager5)
         {
+
+            this.audio = audioManager;
+
+            this.audio2 = audioManager2;
+
+            this.audio3 = audioManager3;
+
+            this.audio4 = audioManager4;
+
+            this.audio5 = audioManager5;
+
             crearPartida();
+
+
         }
         #endregion
 
@@ -110,7 +135,7 @@ namespace AhorcadoMAUI.ViewModels
         /// </summary>
         private void crearPartida()
         {
-
+            crearAudios();
             //juegoTerminado = false;
             intentosRestantes = 5;
             palabraAleatoria();
@@ -119,6 +144,7 @@ namespace AhorcadoMAUI.ViewModels
             lblAvisos = "";
             inputJugador =  "";
             enviarInputCommand = new DelegateCommand(enviarInputCommand_Executed, enviarInputCommand_CanExecute);
+
 
             NotifyPropertyChanged("IntentosRestantes");
             NotifyPropertyChanged("LetrasSeleccionadas");
@@ -134,13 +160,18 @@ namespace AhorcadoMAUI.ViewModels
         {
             int alturaPopup = 0;
 
+            musicaFondo.Stop();
+
             if (intentosRestantes == 0)
             {
+                
+                derrotaAudio.Play();
                 alturaPopup = 350;
                 imagen = "muerto.png";
             }
             else if (letrasRestantes == 0)
             {
+                victoriaAudio.Play();
                 alturaPopup = 375;
                 imagen = "salvado.png";
             }
@@ -153,6 +184,8 @@ namespace AhorcadoMAUI.ViewModels
             {
                 if (boolResult)
                 {
+                    derrotaAudio.Stop();
+
                     crearPartida();
                 }
                 else
@@ -183,6 +216,8 @@ namespace AhorcadoMAUI.ViewModels
 
                 if (palabraParaAdivinar.nombre.Contains(inputJugador))
                 {
+                    aciertoAudio.Play();
+
                     // cambiamos cada _ por la letra en adivinado
                     for (int i = 0; i < adivinado.Length; i++)
                     {
@@ -196,6 +231,8 @@ namespace AhorcadoMAUI.ViewModels
                 }
                 else
                 {
+
+                    falloAudio.Play();
                     intentosRestantes--;
                     actualizarImagen();
                     NotifyPropertyChanged("IntentosRestantes");
@@ -264,17 +301,20 @@ namespace AhorcadoMAUI.ViewModels
         
         }
 
-        /// <summary>
-        /// Método que nos lleva a  la primera página o página raíz una vez pulsado la opción false
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void ReiniciarPrograma(object sender, EventArgs e)
+        public async void crearAudios()
         {
 
-            await App.Current.MainPage.Navigation.PopToRootAsync();
+            musicaFondo = audio.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.wav"));
 
+            aciertoAudio = audio2.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("right.wav"));
 
+            falloAudio = audio3.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("miss.wav"));
+
+            victoriaAudio = audio4.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("win.wav"));
+
+            derrotaAudio = audio5.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("lose.wav"));
+
+            musicaFondo.Play();
         }
 
 

@@ -20,6 +20,7 @@ namespace DAL.Manejadora
         {
 
             clsConexion miConexion;
+
             SqlConnection conexion;
 
             SqlCommand miComando;

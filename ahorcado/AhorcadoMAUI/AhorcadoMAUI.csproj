@@ -55,10 +55,15 @@
 	  <None Remove="Resources\Images\a4a.png" />
 	  <None Remove="Resources\Images\a5a.png" />
 	  <None Remove="Resources\Images\background.jpg" />
+	  <None Remove="Resources\Images\background2.jpg" />
 	  <None Remove="Resources\Images\iconito.png" />
 	  <None Remove="Resources\Images\muerto.png" />
 	  <None Remove="Resources\Images\salvado.png" />
 	  <None Remove="Resources\Raw\background_music.wav" />
+	  <None Remove="Resources\Raw\lose.wav" />
+	  <None Remove="Resources\Raw\miss.wav" />
+	  <None Remove="Resources\Raw\right.wav" />
+	  <None Remove="Resources\Raw\win.wav" />
 	</ItemGroup>
 
 	<ItemGroup>

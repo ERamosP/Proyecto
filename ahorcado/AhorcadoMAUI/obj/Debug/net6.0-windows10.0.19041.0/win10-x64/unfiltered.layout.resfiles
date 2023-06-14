@@ -7,6 +7,7 @@ a3a.scale-100.png
 a4a.scale-100.png
 a5a.scale-100.png
 background.scale-100.jpg
+background2.scale-100.jpg
 iconito.ico
 iconito.scale-100.png
 iconitoLargeTile.scale-100.png
@@ -64,3 +65,7 @@ iconitoSplashScreen.scale-200.png
 iconitoSplashScreen.scale-400.png
 AboutAssets.txt
 background_music.wav
+lose.wav
+miss.wav
+right.wav
+win.wav

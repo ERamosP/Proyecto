@@ -32,6 +32,7 @@ namespace AhorcadoMAUI.Services
             try
             {
                 httpResponse = await httpClient.GetAsync(miUri);
+
                 if (httpResponse.IsSuccessStatusCode)
                 {
                     json = await httpClient.GetStringAsync(miUri);

@@ -21,7 +21,7 @@
                 x:Name="textoFin"
                 HorizontalOptions="Center"
                 Margin="0,10,0,0"
-                />
+                TextColor="Black"/>
             <Button 
                 x:Name="btnTrue"
                 Style="{DynamicResource botonAzulStyle}"
