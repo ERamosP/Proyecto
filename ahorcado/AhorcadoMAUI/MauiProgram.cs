@@ -1,4 +1,6 @@
-﻿namespace AhorcadoMAUI
+﻿using CommunityToolkit.Maui;
+
+namespace AhorcadoMAUI
 {
     public static class MauiProgram
     {
@@ -11,7 +13,7 @@
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                }).UseMauiCommunityToolkit();
 
             return builder.Build();
         }

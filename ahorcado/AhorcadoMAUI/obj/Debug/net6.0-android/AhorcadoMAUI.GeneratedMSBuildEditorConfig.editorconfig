@@ -8,39 +8,39 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AhorcadoMAUI
-build_property.ProjectDir = C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\
+build_property.ProjectDir = C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\AhorcadoMAUI\
 
-[C:/Users/Salva/Desktop/Ahorcado/Proyecto/ahorcado/AhorcadoMAUI/App.xaml]
+[C:/Users/cmendoza/Documents/GitHub/Proyecto/ahorcado/AhorcadoMAUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Salva/Desktop/Ahorcado/Proyecto/ahorcado/AhorcadoMAUI/Resources/Styles/Colors.xaml]
+[C:/Users/cmendoza/Documents/GitHub/Proyecto/ahorcado/AhorcadoMAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Salva/Desktop/Ahorcado/Proyecto/ahorcado/AhorcadoMAUI/Resources/Styles/Styles.xaml]
+[C:/Users/cmendoza/Documents/GitHub/Proyecto/ahorcado/AhorcadoMAUI/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Salva/Desktop/Ahorcado/Proyecto/ahorcado/AhorcadoMAUI/Views/FinalPopUp.xaml]
+[C:/Users/cmendoza/Documents/GitHub/Proyecto/ahorcado/AhorcadoMAUI/Views/FinalPopUp.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Views.FinalPopUp.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\FinalPopUp.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FinalPopUp.xaml
 
-[C:/Users/Salva/Desktop/Ahorcado/Proyecto/ahorcado/AhorcadoMAUI/Views/MenuJuego.xaml]
+[C:/Users/cmendoza/Documents/GitHub/Proyecto/ahorcado/AhorcadoMAUI/Views/MenuJuego.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Views.MenuJuego.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuJuego.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuJuego.xaml
 
-[C:/Users/Salva/Desktop/Ahorcado/Proyecto/ahorcado/AhorcadoMAUI/Views/SinglePlayer.xaml]
+[C:/Users/cmendoza/Documents/GitHub/Proyecto/ahorcado/AhorcadoMAUI/Views/SinglePlayer.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Views.SinglePlayer.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SinglePlayer.xaml

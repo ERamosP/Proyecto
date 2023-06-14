@@ -25,7 +25,7 @@ namespace AhorcadoMAUI.ViewModels
         private DelegateCommand enviarInputCommand;
         private string imagen;
         private int intentosRestantes;
-        private bool juegoTerminado;
+        //private bool juegoTerminado; multiplayer
 
         #endregion
 
@@ -111,7 +111,7 @@ namespace AhorcadoMAUI.ViewModels
         private void crearPartida()
         {
 
-            juegoTerminado = false;
+            //juegoTerminado = false;
             intentosRestantes = 5;
             palabraAleatoria();
             actualizarImagen();
@@ -130,36 +130,38 @@ namespace AhorcadoMAUI.ViewModels
         /// <summary>
         /// Método que comprueba si se ha cumplido alguno de los requisitos necesarios para terminar la partida
         /// </summary>
-        private async Task comprobarFin()
+        private async Task mostrarPopUpFin()
         {
+            int alturaPopup = 0;
+
             if (intentosRestantes == 0)
             {
+                alturaPopup = 350;
                 imagen = "muerto.png";
-                var popup = new FinalPopUp(imagen);
-
-                var result = await App.Current.MainPage.ShowPopupAsync(popup);
-
-                if (result is bool boolResult)
-                {
-                    if (boolResult)
-                    {
-                        crearPartida();
-                    }
-                    else
-                    {
-                        Application.Current.Quit();
-                    }
-                }
-
             }
             else if (letrasRestantes == 0)
             {
+                alturaPopup = 375;
                 imagen = "salvado.png";
-                 
-                crearPartida();
             }
 
-            
+            var popup = new FinalPopUp(imagen, alturaPopup, palabraParaAdivinar.nombre);
+
+            var result = await App.Current.MainPage.ShowPopupAsync(popup);
+
+            if (result is bool boolResult)
+            {
+                if (boolResult)
+                {
+                    crearPartida();
+                }
+                else
+                {
+                    await Application.Current.MainPage.Navigation.PopToRootAsync();
+                }
+            }
+
+
         }
 
         /// <summary>
@@ -208,8 +210,11 @@ namespace AhorcadoMAUI.ViewModels
                 NotifyPropertyChanged("LetrasSeleccionadas");
 
 
-
-                comprobarFin();
+                if (intentosRestantes == 0 || letrasRestantes == 0)
+                {
+                    mostrarPopUpFin();
+                }
+                
             }
 
             NotifyPropertyChanged("LblAvisos");
@@ -222,7 +227,18 @@ namespace AhorcadoMAUI.ViewModels
         /// </summary>
         private async void palabraAleatoria()
         {
-            palabraParaAdivinar = await palabraService.getPalabraAleatoria();
+
+            // TODO: cambiar la app para que la llamada a la API se haga en el menú inicial y pase la palabra al VM
+            // así mostramos el error en el menú si no conecta con la API.
+            try
+            {
+                palabraParaAdivinar = await palabraService.getPalabraAleatoria();
+            }
+            catch (Exception ex)
+            {
+                lblAvisos = "Error de conexión";
+            }
+            
 
             adivinado = new StringBuilder();
 
@@ -234,6 +250,7 @@ namespace AhorcadoMAUI.ViewModels
             }
 
             NotifyPropertyChanged("Adivinado");
+            NotifyPropertyChanged("LblAvisos");
         }
 
         /// <summary>

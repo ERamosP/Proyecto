@@ -37,6 +37,8 @@ namespace AhorcadoMAUI.Services
                     json = await httpClient.GetStringAsync(miUri);
                     httpClient.Dispose();
                     palabraEncontrada = JsonConvert.DeserializeObject<clsPalabra>(json);
+                    palabraEncontrada.nombre = palabraEncontrada.nombre.ToLower();
+
                 }
                 else if (httpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
