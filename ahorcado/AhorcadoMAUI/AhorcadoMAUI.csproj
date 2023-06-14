@@ -32,7 +32,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\iconito.png" ForegroundFile="Resources\AppIcon\iconito.png" Color="#FBE49B" />
+		<MauiIcon Include="Resources\AppIcon\iconito.png" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\iconito.png" Color="#FBE49B" BaseSize="128,128" />
@@ -58,11 +58,13 @@
 	  <None Remove="Resources\Images\iconito.png" />
 	  <None Remove="Resources\Images\muerto.png" />
 	  <None Remove="Resources\Images\salvado.png" />
+	  <None Remove="Resources\Raw\background_music.wav" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

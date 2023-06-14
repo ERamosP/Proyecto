@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj": {}
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj": {
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj",
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj",
         "projectName": "AhorcadoMAUI",
-        "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj",
-        "packagesPath": "C:\\Users\\cmendoza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\AhorcadoMAUI\\obj\\",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\AhorcadoMAUI\\AhorcadoMAUI.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\AhorcadoMAUI\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cmendoza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -37,32 +37,32 @@
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
             "projectReferences": {
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           },
           "net6.0-ios16.1": {
             "targetAlias": "net6.0-ios",
             "projectReferences": {
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           },
           "net6.0-maccatalyst16.1": {
             "targetAlias": "net6.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041.0",
             "projectReferences": {
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -94,6 +94,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Plugin.Maui.Audio": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -130,15 +134,15 @@
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.android",
@@ -182,7 +186,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net6.0-ios16.1": {
           "targetAlias": "net6.0-ios",
@@ -205,6 +209,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Plugin.Maui.Audio": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
               "version": "[6.0.1, )",
@@ -225,11 +233,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.iOS.Ref",
-              "version": "[16.2.19, 16.2.19]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.iOS.Runtime.iossimulator-x64",
-              "version": "[16.2.19, 16.2.19]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.ios",
@@ -273,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net6.0-maccatalyst16.1": {
           "targetAlias": "net6.0-maccatalyst",
@@ -296,6 +304,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Plugin.Maui.Audio": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
               "version": "[6.0.1, )",
@@ -317,11 +329,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.MacCatalyst.Ref",
-              "version": "[16.2.19, 16.2.19]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64",
-              "version": "[16.2.19, 16.2.19]"
+              "version": "[16.2.34, 16.2.34]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.maccatalyst",
@@ -365,7 +377,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         },
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
@@ -393,6 +405,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Plugin.Maui.Audio": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -409,7 +425,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.win",
@@ -437,7 +453,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -445,7 +461,7 @@
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             }
           ],
           "frameworkReferences": {
@@ -465,7 +481,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -492,20 +508,20 @@
         }
       }
     },
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\cmendoza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cmendoza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -548,7 +564,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

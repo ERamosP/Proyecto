@@ -9,4 +9,4 @@ File=Resources\Images\iconito.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAp
 File=Resources\Images\muerto.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\salvado.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\yodadep.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\AppIcon\iconito.png;Link=;BaseSize=;Resize=;TintColor=;Color=#FBE49B;IsAppIcon=True;ForegroundScale=;ForegroundFile=Resources\AppIcon\iconito.png
+File=Resources\AppIcon\iconito.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=True;ForegroundScale=;ForegroundFile=
