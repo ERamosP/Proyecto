@@ -1,7 +1,10 @@
+using proyectoFinDeGradoAhorcado.Hubs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSignalR(); //added
 
 var app = builder.Build();
 
@@ -9,7 +12,10 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+    app.UseHsts(); // added
+    
 }
+app.UseHttpsRedirection(); // added
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -18,8 +24,12 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
-app.MapControllerRoute(
+app.MapHub<ahorcadoHub>("/ahorcado"); //added
+
+/*No sé qué es esto 
+ * 
+ * app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");*/
 
 app.Run();
