@@ -190,6 +190,8 @@ namespace AhorcadoMAUI.ViewModels
                 }
                 else
                 {
+                    derrotaAudio.Stop();
+
                     await Application.Current.MainPage.Navigation.PopToRootAsync();
                 }
             }
@@ -232,7 +234,22 @@ namespace AhorcadoMAUI.ViewModels
                 else
                 {
 
-                    falloAudio.Play();
+                    if (falloAudio.IsPlaying)
+                    {
+
+                        falloAudio.Stop();
+
+                        falloAudio.Play();
+
+                    }
+                    else {
+
+
+                        falloAudio.Play();
+
+                    }
+
+                    
                     intentosRestantes--;
                     actualizarImagen();
                     NotifyPropertyChanged("IntentosRestantes");
