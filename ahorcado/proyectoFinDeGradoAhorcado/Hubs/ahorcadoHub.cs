@@ -24,7 +24,7 @@ namespace proyectoFinDeGradoAhorcado.Hubs
             }
             else if (clsGameInfo.NumJugadoresEnPartida == 1)
             {
-                await Clients.Caller.SendAsync("ElegirPalabra", jugador);
+                await Clients.All.SendAsync("ElegirPalabra", jugador);
                 clsGameInfo.NumJugadoresEnPartida++;
             }
             else
@@ -59,7 +59,7 @@ namespace proyectoFinDeGradoAhorcado.Hubs
         // restantes del jugador contrincante 
         public async Task ActualizarImagenAhorcado(string imagenAhorcadoSource)
         {
-            await Clients.All.SendAsync("Actualizar", imagenAhorcadoSource);
+            await Clients.Others.SendAsync("Actualizar", imagenAhorcadoSource);
         }
 
         /// <summary>

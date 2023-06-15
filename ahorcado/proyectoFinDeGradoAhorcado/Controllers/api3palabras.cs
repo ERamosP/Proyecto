@@ -7,7 +7,7 @@ namespace proyectoFinDeGradoAhorcado.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class api5palabras : ControllerBase
+    public class api3palabras : ControllerBase
     {
         // GET: api/<ValuesController>
         [HttpGet]
@@ -15,7 +15,7 @@ namespace proyectoFinDeGradoAhorcado.Controllers
         {
             try
             {
-                List<clsPalabra> ListadoPalabras = DAL.Manejadora.ManejadoraPalabras_DAL.get5PalabrasRandom();
+                List<clsPalabra> ListadoPalabras = DAL.Manejadora.ManejadoraPalabras_DAL.get3PalabrasRandom();
                 return Ok(ListadoPalabras);
             }
             catch (Exception ex)

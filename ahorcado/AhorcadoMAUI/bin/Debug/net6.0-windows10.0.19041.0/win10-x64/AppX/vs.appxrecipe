@@ -30,25 +30,25 @@
     <AppXManifest Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-14T20:48:47.082</Modified>
+      <Modified>2023-06-15T16:33:57.225</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-14T20:48:46.515</Modified>
+      <Modified>2023-06-15T16:33:56.540</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AhorcadoMAUI.runtimeconfig.json">
       <PackagePath>AhorcadoMAUI.runtimeconfig.json</PackagePath>
-      <Modified>2023-06-14T14:22:06.030</Modified>
+      <Modified>2023-06-15T16:25:48.201</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AhorcadoMAUI.dll">
       <PackagePath>AhorcadoMAUI.dll</PackagePath>
-      <Modified>2023-06-14T20:48:45.292</Modified>
+      <Modified>2023-06-15T16:33:54.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>AhorcadoMAUI.exe</PackagePath>
-      <Modified>2023-06-14T20:48:45.325</Modified>
+      <Modified>2023-06-15T16:33:54.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -582,21 +582,9 @@
       <PackagePath>System.Text.Encoding.dll</PackagePath>
       <Modified>2022-10-23T17:52:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\System.Text.Encodings.Web.dll">
-      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
-      <Modified>2022-10-23T18:34:48.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\System.Text.Json.dll">
-      <PackagePath>System.Text.Json.dll</PackagePath>
-      <Modified>2022-10-23T18:34:52.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
       <Modified>2022-10-23T18:34:56.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\System.Threading.Channels.dll">
-      <PackagePath>System.Threading.Channels.dll</PackagePath>
-      <Modified>2022-10-23T18:34:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
@@ -974,6 +962,34 @@
       <PackagePath>CommunityToolkit.Maui.Core.dll</PackagePath>
       <Modified>2022-11-08T23:34:42.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.connections.abstractions\7.0.7\lib\netstandard2.1\Microsoft.AspNetCore.Connections.Abstractions.dll">
+      <PackagePath>Microsoft.AspNetCore.Connections.Abstractions.dll</PackagePath>
+      <Modified>2023-05-24T20:59:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.http.connections.client\7.0.7\lib\netstandard2.1\Microsoft.AspNetCore.Http.Connections.Client.dll">
+      <PackagePath>Microsoft.AspNetCore.Http.Connections.Client.dll</PackagePath>
+      <Modified>2023-05-24T20:59:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.http.connections.common\7.0.7\lib\netstandard2.0\Microsoft.AspNetCore.Http.Connections.Common.dll">
+      <PackagePath>Microsoft.AspNetCore.Http.Connections.Common.dll</PackagePath>
+      <Modified>2023-05-24T20:59:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.signalr.client\7.0.7\lib\netstandard2.0\Microsoft.AspNetCore.SignalR.Client.dll">
+      <PackagePath>Microsoft.AspNetCore.SignalR.Client.dll</PackagePath>
+      <Modified>2023-05-24T20:59:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.signalr.client.core\7.0.7\lib\netstandard2.1\Microsoft.AspNetCore.SignalR.Client.Core.dll">
+      <PackagePath>Microsoft.AspNetCore.SignalR.Client.Core.dll</PackagePath>
+      <Modified>2023-05-24T20:59:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.signalr.common\7.0.7\lib\netstandard2.0\Microsoft.AspNetCore.SignalR.Common.dll">
+      <PackagePath>Microsoft.AspNetCore.SignalR.Common.dll</PackagePath>
+      <Modified>2023-05-24T20:59:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.aspnetcore.signalr.protocols.json\7.0.7\lib\netstandard2.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll">
+      <PackagePath>Microsoft.AspNetCore.SignalR.Protocols.Json.dll</PackagePath>
+      <Modified>2023-05-24T20:59:32.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.configuration\6.0.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
       <Modified>2022-02-24T00:12:18.000</Modified>
@@ -982,29 +998,33 @@
       <PackagePath>Microsoft.Extensions.Configuration.Abstractions.dll</PackagePath>
       <Modified>2021-10-22T23:47:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.dependencyinjection\6.0.0\lib\net6.0\Microsoft.Extensions.DependencyInjection.dll">
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.dependencyinjection\7.0.0\lib\net6.0\Microsoft.Extensions.DependencyInjection.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
-      <Modified>2021-10-22T23:49:56.000</Modified>
+      <Modified>2022-10-18T16:19:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\6.0.0\lib\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\7.0.0\lib\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
-      <Modified>2021-10-22T23:48:34.000</Modified>
+      <Modified>2022-10-18T16:19:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.logging\6.0.0\lib\netstandard2.1\Microsoft.Extensions.Logging.dll">
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.features\7.0.7\lib\netstandard2.0\Microsoft.Extensions.Features.dll">
+      <PackagePath>Microsoft.Extensions.Features.dll</PackagePath>
+      <Modified>2023-05-24T20:58:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.logging\7.0.0\lib\net6.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
-      <Modified>2021-10-22T23:50:34.000</Modified>
+      <Modified>2022-10-18T16:20:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.1\lib\net6.0\Microsoft.Extensions.Logging.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.1\lib\net6.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
-      <Modified>2022-02-24T00:12:48.000</Modified>
+      <Modified>2023-05-24T14:40:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.options\6.0.0\lib\netstandard2.1\Microsoft.Extensions.Options.dll">
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.options\7.0.1\lib\net6.0\Microsoft.Extensions.Options.dll">
       <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
-      <Modified>2021-10-22T23:50:00.000</Modified>
+      <Modified>2023-01-20T00:09:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.primitives\6.0.0\lib\net6.0\Microsoft.Extensions.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.extensions.primitives\7.0.0\lib\net6.0\Microsoft.Extensions.Primitives.dll">
       <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
-      <Modified>2021-10-22T23:51:10.000</Modified>
+      <Modified>2022-10-18T16:19:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\lib\net5.0-windows10.0.18362.0\Microsoft.Graphics.Canvas.Interop.dll">
       <PackagePath>Microsoft.Graphics.Canvas.Interop.dll</PackagePath>
@@ -1070,6 +1090,22 @@
       <PackagePath>Plugin.Maui.Audio.dll</PackagePath>
       <Modified>2022-11-29T09:59:54.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\system.io.pipelines\7.0.0\lib\net6.0\System.IO.Pipelines.dll">
+      <PackagePath>System.IO.Pipelines.dll</PackagePath>
+      <Modified>2022-10-18T16:24:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\system.text.encodings.web\7.0.0\lib\net6.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+      <Modified>2022-10-18T16:19:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\system.text.json\7.0.3\lib\net6.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+      <Modified>2023-05-24T14:45:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\system.threading.channels\7.0.0\lib\net6.0\System.Threading.Channels.dll">
+      <PackagePath>System.Threading.Channels.dll</PackagePath>
+      <Modified>2022-10-18T16:40:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2022-04-28T15:57:10.000</Modified>
@@ -1080,11 +1116,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\Entidades\bin\Debug\net6.0\Entidades.dll">
       <PackagePath>Entidades.dll</PackagePath>
-      <Modified>2023-06-14T14:18:28.519</Modified>
+      <Modified>2023-06-15T16:23:34.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\AhorcadoMAUI.deps.json">
       <PackagePath>AhorcadoMAUI.deps.json</PackagePath>
-      <Modified>2023-06-14T20:48:46.879</Modified>
+      <Modified>2023-06-15T16:33:56.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\.nuget\packages\microsoft.maui.controls.ref.win\6.0.547\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1108,15 +1144,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\Resources\Raw\lose.wav">
       <PackagePath>lose.wav</PackagePath>
-      <Modified>2023-06-14T17:52:09.828</Modified>
+      <Modified>2023-06-15T16:20:55.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\Resources\Raw\miss.wav">
       <PackagePath>miss.wav</PackagePath>
-      <Modified>2023-06-14T17:50:54.207</Modified>
+      <Modified>2023-06-15T16:33:16.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\Resources\Raw\right.wav">
       <PackagePath>right.wav</PackagePath>
-      <Modified>2023-06-14T17:51:38.777</Modified>
+      <Modified>2023-06-15T16:32:16.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\Resources\Raw\win.wav">
       <PackagePath>win.wav</PackagePath>
@@ -1124,23 +1160,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\iconitoSplashScreen.scale-100.png">
       <PackagePath>iconitoSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-06-14T14:18:44.464</Modified>
+      <Modified>2023-06-15T16:25:43.264</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\iconitoSplashScreen.scale-125.png">
       <PackagePath>iconitoSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-06-14T14:18:44.527</Modified>
+      <Modified>2023-06-15T16:25:43.313</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\iconitoSplashScreen.scale-150.png">
       <PackagePath>iconitoSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-06-14T14:18:44.614</Modified>
+      <Modified>2023-06-15T16:25:43.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\iconitoSplashScreen.scale-200.png">
       <PackagePath>iconitoSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-06-14T14:18:44.754</Modified>
+      <Modified>2023-06-15T16:25:43.491</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\iconitoSplashScreen.scale-400.png">
       <PackagePath>iconitoSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-06-14T14:18:45.245</Modified>
+      <Modified>2023-06-15T16:25:43.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -1184,7 +1220,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconito.ico">
       <PackagePath>iconito.ico</PackagePath>
-      <Modified>2023-06-14T17:56:25.659</Modified>
+      <Modified>2023-06-15T16:25:43.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconito.scale-100.png">
       <PackagePath>iconito.scale-100.png</PackagePath>
@@ -1192,183 +1228,183 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLargeTile.scale-100.png">
       <PackagePath>iconitoLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.835</Modified>
+      <Modified>2023-06-15T16:25:44.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLargeTile.scale-125.png">
       <PackagePath>iconitoLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.878</Modified>
+      <Modified>2023-06-15T16:25:45.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLargeTile.scale-150.png">
       <PackagePath>iconitoLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.928</Modified>
+      <Modified>2023-06-15T16:25:45.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLargeTile.scale-200.png">
       <PackagePath>iconitoLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.998</Modified>
+      <Modified>2023-06-15T16:25:45.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLargeTile.scale-400.png">
       <PackagePath>iconitoLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-06-14T17:56:27.206</Modified>
+      <Modified>2023-06-15T16:25:45.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>iconitoLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.098</Modified>
+      <Modified>2023-06-15T16:25:44.283</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>iconitoLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.112</Modified>
+      <Modified>2023-06-15T16:25:44.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>iconitoLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.179</Modified>
+      <Modified>2023-06-15T16:25:44.362</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>iconitoLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.129</Modified>
+      <Modified>2023-06-15T16:25:44.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>iconitoLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.149</Modified>
+      <Modified>2023-06-15T16:25:44.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-unplated_targetsize-16.png">
       <PackagePath>iconitoLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.992</Modified>
+      <Modified>2023-06-15T16:25:44.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-unplated_targetsize-24.png">
       <PackagePath>iconitoLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.011</Modified>
+      <Modified>2023-06-15T16:25:44.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-unplated_targetsize-256.png">
       <PackagePath>iconitoLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.081</Modified>
+      <Modified>2023-06-15T16:25:44.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-unplated_targetsize-32.png">
       <PackagePath>iconitoLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.031</Modified>
+      <Modified>2023-06-15T16:25:44.222</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.altform-unplated_targetsize-48.png">
       <PackagePath>iconitoLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.049</Modified>
+      <Modified>2023-06-15T16:25:44.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.scale-100.png">
       <PackagePath>iconitoLogo.scale-100.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.773</Modified>
+      <Modified>2023-06-15T16:25:43.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.scale-125.png">
       <PackagePath>iconitoLogo.scale-125.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.793</Modified>
+      <Modified>2023-06-15T16:25:44.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.scale-150.png">
       <PackagePath>iconitoLogo.scale-150.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.814</Modified>
+      <Modified>2023-06-15T16:25:44.032</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.scale-200.png">
       <PackagePath>iconitoLogo.scale-200.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.835</Modified>
+      <Modified>2023-06-15T16:25:44.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.scale-400.png">
       <PackagePath>iconitoLogo.scale-400.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.863</Modified>
+      <Modified>2023-06-15T16:25:44.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.targetsize-16.png">
       <PackagePath>iconitoLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.881</Modified>
+      <Modified>2023-06-15T16:25:44.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.targetsize-24.png">
       <PackagePath>iconitoLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.900</Modified>
+      <Modified>2023-06-15T16:25:44.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.targetsize-256.png">
       <PackagePath>iconitoLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.972</Modified>
+      <Modified>2023-06-15T16:25:44.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.targetsize-32.png">
       <PackagePath>iconitoLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.918</Modified>
+      <Modified>2023-06-15T16:25:44.124</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoLogo.targetsize-48.png">
       <PackagePath>iconitoLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-06-14T17:56:25.937</Modified>
+      <Modified>2023-06-15T16:25:44.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoMediumTile.scale-100.png">
       <PackagePath>iconitoMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.441</Modified>
+      <Modified>2023-06-15T16:25:44.600</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoMediumTile.scale-125.png">
       <PackagePath>iconitoMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.467</Modified>
+      <Modified>2023-06-15T16:25:44.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoMediumTile.scale-150.png">
       <PackagePath>iconitoMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.496</Modified>
+      <Modified>2023-06-15T16:25:44.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoMediumTile.scale-200.png">
       <PackagePath>iconitoMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.531</Modified>
+      <Modified>2023-06-15T16:25:44.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoMediumTile.scale-400.png">
       <PackagePath>iconitoMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.599</Modified>
+      <Modified>2023-06-15T16:25:44.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoSmallTile.scale-100.png">
       <PackagePath>iconitoSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.307</Modified>
+      <Modified>2023-06-15T16:25:44.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoSmallTile.scale-125.png">
       <PackagePath>iconitoSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.328</Modified>
+      <Modified>2023-06-15T16:25:44.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoSmallTile.scale-150.png">
       <PackagePath>iconitoSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.355</Modified>
+      <Modified>2023-06-15T16:25:44.524</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoSmallTile.scale-200.png">
       <PackagePath>iconitoSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.381</Modified>
+      <Modified>2023-06-15T16:25:44.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoSmallTile.scale-400.png">
       <PackagePath>iconitoSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.416</Modified>
+      <Modified>2023-06-15T16:25:44.575</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoStoreLogo.scale-100.png">
       <PackagePath>iconitoStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.199</Modified>
+      <Modified>2023-06-15T16:25:44.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoStoreLogo.scale-125.png">
       <PackagePath>iconitoStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.220</Modified>
+      <Modified>2023-06-15T16:25:44.398</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoStoreLogo.scale-150.png">
       <PackagePath>iconitoStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.240</Modified>
+      <Modified>2023-06-15T16:25:44.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoStoreLogo.scale-200.png">
       <PackagePath>iconitoStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.262</Modified>
+      <Modified>2023-06-15T16:25:44.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoStoreLogo.scale-400.png">
       <PackagePath>iconitoStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.288</Modified>
+      <Modified>2023-06-15T16:25:44.469</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoWideTile.scale-100.png">
       <PackagePath>iconitoWideTile.scale-100.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.620</Modified>
+      <Modified>2023-06-15T16:25:44.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoWideTile.scale-125.png">
       <PackagePath>iconitoWideTile.scale-125.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.645</Modified>
+      <Modified>2023-06-15T16:25:44.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoWideTile.scale-150.png">
       <PackagePath>iconitoWideTile.scale-150.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.673</Modified>
+      <Modified>2023-06-15T16:25:44.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoWideTile.scale-200.png">
       <PackagePath>iconitoWideTile.scale-200.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.709</Modified>
+      <Modified>2023-06-15T16:25:44.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconitoWideTile.scale-400.png">
       <PackagePath>iconitoWideTile.scale-400.png</PackagePath>
-      <Modified>2023-06-14T17:56:26.803</Modified>
+      <Modified>2023-06-15T16:25:44.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Salva\Desktop\Ahorcado\Proyecto\ahorcado\AhorcadoMAUI\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\muerto.scale-100.png">
       <PackagePath>muerto.scale-100.png</PackagePath>

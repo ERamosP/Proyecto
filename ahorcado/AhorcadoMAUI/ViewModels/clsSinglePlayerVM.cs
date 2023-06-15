@@ -31,7 +31,7 @@ namespace AhorcadoMAUI.ViewModels
         private readonly IAudioManager audio3;
         private readonly IAudioManager audio4;
         private readonly IAudioManager audio5;
-        IAudioPlayer musicaFondo;
+
         IAudioPlayer aciertoAudio;
         IAudioPlayer falloAudio;
         IAudioPlayer victoriaAudio;
@@ -160,7 +160,6 @@ namespace AhorcadoMAUI.ViewModels
         {
             int alturaPopup = 0;
 
-            musicaFondo.Stop();
 
             if (intentosRestantes == 0)
             {
@@ -218,6 +217,7 @@ namespace AhorcadoMAUI.ViewModels
 
                 if (palabraParaAdivinar.nombre.Contains(inputJugador))
                 {
+
                     aciertoAudio.Play();
 
                     // cambiamos cada _ por la letra en adivinado
@@ -318,10 +318,13 @@ namespace AhorcadoMAUI.ViewModels
         
         }
 
+
+
+        /// <summary>
+        /// Método para crear e inicializar los audios correspondientes
+        /// </summary>
         public async void crearAudios()
         {
-
-            musicaFondo = audio.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.wav"));
 
             aciertoAudio = audio2.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("right.wav"));
 
@@ -331,7 +334,6 @@ namespace AhorcadoMAUI.ViewModels
 
             derrotaAudio = audio5.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("lose.wav"));
 
-            musicaFondo.Play();
         }
 
 

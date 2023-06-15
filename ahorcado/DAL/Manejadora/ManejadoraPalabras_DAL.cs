@@ -61,7 +61,7 @@ namespace DAL.Manejadora
         }
 
 
-        public static List<clsPalabra> get5PalabrasRandom()
+        public static List<clsPalabra> get3PalabrasRandom()
         {
 
             clsConexion miConexion;
@@ -80,7 +80,7 @@ namespace DAL.Manejadora
             {
 
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "SELECT TOP 5 id, nombre FROM palabra ORDER BY NEWID()";
+                miComando.CommandText = "SELECT TOP 3 id, nombre FROM palabra ORDER BY NEWID()";
                 miComando.Connection = conexion;
                 miLector = miComando.ExecuteReader();
 

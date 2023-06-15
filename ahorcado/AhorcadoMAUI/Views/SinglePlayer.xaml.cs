@@ -12,6 +12,7 @@ public partial class SinglePlayer : ContentPage
     private readonly IAudioManager audio4;
     private readonly IAudioManager audio5;
 
+    IAudioPlayer player;
     public SinglePlayer()
 	{
 		InitializeComponent();
@@ -34,6 +35,25 @@ public partial class SinglePlayer : ContentPage
 
         this.BindingContext = new clsSinglePlayerVM(audio,audio2,audio3,audio4,audio5);
         
+    }
+
+    protected async override void OnAppearing()
+    {
+        player = audio.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.wav"));
+
+        player.Play();
+
+        player.Loop = true;
+
+        base.OnAppearing();
+    }
+
+    protected async override void OnDisappearing()
+    {
+
+        player.Stop();
+
+        base.OnDisappearing();
     }
 
 }

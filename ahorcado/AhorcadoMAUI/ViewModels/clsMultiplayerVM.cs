@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using AhorcadoMAUI.Services;
 
 namespace AhorcadoMAUI.ViewModels
 {
@@ -24,6 +25,8 @@ namespace AhorcadoMAUI.ViewModels
         private bool juegoTerminado;
         private string infoContrincante;
         private HubConnection _connection;
+        private string palabraEnviar;
+        private List<clsPalabra> listaPalabras;
         /************************************/
         private clsPalabra palabraParaAdivinar;
         private StringBuilder adivinado; // ponemos un guión en cada posición
@@ -55,6 +58,53 @@ namespace AhorcadoMAUI.ViewModels
         {
             get { return infoContrincante; }
         }
+
+        public StringBuilder Adivinado
+        {
+            get { return adivinado; }
+        }
+        public string LblAvisos
+        {
+            get { return lblAvisos; }
+        }
+        public string LetrasSeleccionadas
+        {
+            get { return letrasSeleccionadas; }
+        }
+        public string InputJugador
+        {
+            get { return inputJugador; }
+            set
+            {
+                if (value != null)
+                {
+                    inputJugador = value;
+                    NotifyPropertyChanged(nameof(InputJugador));
+                    EnviarInputCommand.RaiseCanExecuteChanged();
+                }
+
+            }
+        }
+        public DelegateCommand EnviarInputCommand
+        {
+            get { return enviarInputCommand; }
+        }
+        public string Imagen
+        {
+            get { return imagen; }
+        }
+        public int IntentosRestantes
+        {
+            get { return intentosRestantes; }
+        }
+
+        public bool EmpiezaJuego
+        {
+
+            get { return empiezaJuego; }
+
+        }
+
         #endregion
 
         #region Constructores
@@ -72,7 +122,7 @@ namespace AhorcadoMAUI.ViewModels
             _connection.On<string>("EsperarPalabra", esperarPalabra); // jugador 3 o mayor a 3 = espectador 
 
             _connection.On<string>("EmpezarJuego", recibirPalabra); // actualiza el tablero de ambos jugadores + cambia los turnos
-
+            _connection.On<string>("Actualizar", actualizarInfoContrincante); // avisa del fin de la partida a todos los jugadores 
             //_connection.On<string>("AvisarFinPartida", finPartida); // avisa del fin de la partida a todos los jugadores 
 
             try
@@ -108,6 +158,7 @@ namespace AhorcadoMAUI.ViewModels
         {
             jugador.IdJugador = 1;
             jugador.NombreJugador = "Jugador 1";
+            jugador.Listo = false;
             lblAvisos = $"¡Eres el {jugador.NombreJugador}! Esperando a otro jugador";
             jugadorEnPartida = jugador;
 
@@ -121,34 +172,80 @@ namespace AhorcadoMAUI.ViewModels
         {
             if (jugador.IdJugador == 1)
             {
-                // popup para elegir palabra
+                palabraAleatoria();
+                var popup = new SeleccionPopUp(listaPalabras);
+
+                var result = await App.Current.MainPage.ShowPopupAsync(popup);
+                palabraEnviar = result.ToString();
             }
             else
             {
                 jugador.IdJugador = 2;
                 jugador.NombreJugador = "Jugador 2";
+                jugador.Listo = false;
                 lblAvisos = $"¡Eres el {jugador.NombreJugador}!";
                 jugadorEnPartida = jugador;
 
-                // popup para elegir palabra
+                palabraAleatoria();
+                var popup = new SeleccionPopUp(listaPalabras);
+
+                var result = await App.Current.MainPage.ShowPopupAsync(popup);
+                palabraEnviar = result.ToString();
             }
 
+            jugadorEnPartida.Listo = true;
             // le pasamos la palabra, cuando cree lo del popup lo cambio
-            await _connection.InvokeCoreAsync("PalabraAleatoria", args: new[] { jugadorEnPartida });
+            await _connection.InvokeCoreAsync("PalabraAleatoria", args: new[] { palabraEnviar });
 
             NotifyPropertyChanged(nameof(lblAvisos));
         }
+
+
         /// <summary>
         /// 
         /// </summary>
         public void esperarPalabra(string palabra)
         {
+            if (jugadorEnPartida.Listo)
+            {
+                lblAvisos = $"El otro tiene que adivinar {palabra}.";
+            }
+            else
+            {
+                palabraParaAdivinar.nombre = palabra;
+
+                ponerAsteriscos();
+            }
+
+            NotifyPropertyChanged(nameof(lblAvisos));
             // decirle al jugador listo que espere y al que está decidiendo aun le manda la palabra que debe adivinar 
         }
 
+        /// <summary>
+        /// Método que genera migrañas
+        /// </summary>
+        /// <param name="palabra"></param>
         public void recibirPalabra(string palabra)
         {
+            if (jugadorEnPartida.Listo && string.IsNullOrEmpty(palabraParaAdivinar.nombre))
+            {
+                palabraParaAdivinar.nombre = palabra;
+
+                ponerAsteriscos();
+            }
+
+            empiezaJuego = true;
+            lblAvisos = "Comienza la partida";
+
+            NotifyPropertyChanged(nameof(lblAvisos));
+            NotifyPropertyChanged(nameof(empiezaJuego));
             // le manda la palabra al jugador que estaba esperando y comienza la partida de ambos
+        }
+
+        public void actualizarInfoContrincante(string info)
+        {
+            infoContrincante = info;
+            NotifyPropertyChanged(nameof(InfoContrincante));
         }
         #endregion
 
@@ -224,14 +321,13 @@ namespace AhorcadoMAUI.ViewModels
                 }
             }
 
-
         }
 
         /// <summary>
         /// Método comprueba si la letra se encuentra en la palabra. 
         /// Si se encuentra, cambia cada posición de _ donde se encuentre la letra en la palabra adivinar por la letra introducida por el usuario. 
         /// </summary>
-        private void comprobarInput()
+        private async void comprobarInput()
         {
 
             inputJugador = inputJugador.ToLower();
@@ -264,24 +360,20 @@ namespace AhorcadoMAUI.ViewModels
 
                     if (falloAudio.IsPlaying)
                     {
-
                         falloAudio.Stop();
 
                         falloAudio.Play();
-
                     }
                     else
                     {
-
-
                         falloAudio.Play();
-
                     }
-
 
                     intentosRestantes--;
                     actualizarImagen();
                     NotifyPropertyChanged("IntentosRestantes");
+                    infoContrincante = $"Al otro le quedan {intentosRestantes} intentos.";
+                    await _connection.InvokeCoreAsync("ActualizarImagenAhorcado", args: new[] { infoContrincante });
 
 
                 }
@@ -296,6 +388,8 @@ namespace AhorcadoMAUI.ViewModels
                 if (intentosRestantes == 0 || letrasRestantes == 0)
                 {
                     mostrarPopUpFin();
+
+
                 }
 
             }
@@ -328,6 +422,42 @@ namespace AhorcadoMAUI.ViewModels
         }
 
         /// <summary>
+        /// Método que realiza la llamada a la API y recibe un listado de palabras para que el jugador elija una que enviar al contrincante
+        /// </summary>
+        private async void palabraAleatoria()
+        {
+
+            // TODO: cambiar la app para que la llamada a la API se haga en el menú inicial y pase la palabra al VM
+            // así mostramos el error en el menú si no conecta con la API.
+            try
+            {
+                listaPalabras = await palabraService.get3PalabraAleatoria();
+            }
+            catch (Exception ex)
+            {
+                lblAvisos = "Error de conexión";
+            }
+
+
+
+        }
+
+        private async void ponerAsteriscos()
+        {
+            adivinado = new StringBuilder();
+
+            letrasRestantes = palabraParaAdivinar.nombre.Length;
+
+            for (int i = 0; i < palabraParaAdivinar.nombre.Length; i++)
+            {
+                adivinado.Append("*");
+            }
+
+            NotifyPropertyChanged("Adivinado");
+            NotifyPropertyChanged("LblAvisos");
+        }
+
+        /// <summary>
         /// Método para actualizar la imagen en caso de error , la imagen será actualizada por la correspondiente en caso de que el jugador cometa un error.
         /// </summary>
         private void actualizarImagen()
@@ -339,6 +469,10 @@ namespace AhorcadoMAUI.ViewModels
 
         }
 
+
+        /// <summary>
+        /// Método para crear e inicializar los audios correspondientes
+        /// </summary>
         public async void crearAudios()
         {
 

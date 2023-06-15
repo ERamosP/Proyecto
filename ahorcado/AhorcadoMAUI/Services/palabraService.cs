@@ -55,17 +55,17 @@ namespace AhorcadoMAUI.Services
 
 
         /// <summary>
-        /// Función que llama a la api, pide 5 palabras aleatorias y las devuelve
+        /// Función que llama a la api, pide 3 palabras aleatorias y las devuelve
         /// Precondiciones: Ninguna
         /// Postcondiciones: Si no encuentra ninguna palabra devuelve null. 
         /// Si hay un error, lanza la axcepción correspondiente
         /// </summary>
         /// <returns>La palabra devuelta por la api</returns>
-        public static async Task<List<clsPalabra>> get5Palabra5Aleatoria5()
+        public static async Task<List<clsPalabra>> get3PalabraAleatoria()
         {
             HttpClient httpClient;
             string json;
-            string uri = $"{clsUriBase.getUriBase()}api5palabras";
+            string uri = $"{clsUriBase.getUriBase()}api3palabras";
             Uri miUri = new Uri(uri);
             HttpResponseMessage httpResponse;
             List<clsPalabra> palabrasEncontradas = new List<clsPalabra>();
