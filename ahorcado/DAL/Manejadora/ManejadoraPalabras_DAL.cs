@@ -59,8 +59,54 @@ namespace DAL.Manejadora
             return palabra;
 
         }
+
+
+        public static List<clsPalabra> get5PalabrasRandom()
+        {
+
+            clsConexion miConexion;
+
+            SqlConnection conexion;
+
+            SqlCommand miComando;
+            clsPalabra palabraAux = null;
+            SqlDataReader miLector;
+            List<clsPalabra> listaPalabrasDevueltas = new List<clsPalabra>();
+
+            miConexion = new clsConexion();
+            miComando = new SqlCommand();
+
+            try
+            {
+
+                conexion = miConexion.getConnection();
+                miComando.CommandText = "SELECT TOP 5 id, nombre FROM palabra ORDER BY NEWID()";
+                miComando.Connection = conexion;
+                miLector = miComando.ExecuteReader();
+
+                if (miLector.HasRows)
+                {
+                    while (miLector.Read())
+                    {
+                        palabraAux = new clsPalabra();
+
+                        palabraAux.id = (int)miLector["id"];
+                        palabraAux.nombre = (string)miLector["nombre"];
+
+                        listaPalabrasDevueltas.Add(palabraAux);
+                    }
+                }
+                miLector.Close();
+                miConexion.closeConnection(ref conexion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return listaPalabrasDevueltas;
+
+        }
+
     }
-
-
-
 }

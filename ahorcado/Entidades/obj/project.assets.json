@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Salva\\.nuget\\packages\\": {},
+    "C:\\Users\\godie\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Salva\\Desktop\\Ahorcado\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Salva\\Desktop\\Ahorcado\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
-      "packagesPath": "C:\\Users\\Salva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Salva\\Desktop\\Ahorcado\\Proyecto\\ahorcado\\Entidades\\obj\\",
+      "projectPath": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+      "packagesPath": "C:\\Users\\godie\\.nuget\\packages\\",
+      "outputPath": "C:\\Ficheros\\Proyecto\\ahorcado\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Salva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\godie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
