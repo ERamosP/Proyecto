@@ -17,23 +17,43 @@ namespace proyectoFinDeGradoAhorcado.Hubs
         public async Task UnirseAlJuego(clsJugador jugador)
         {
 
-            if (clsGameInfo.NumJugadores == 0)
+            if (clsGameInfo.NumJugadoresEnPartida == 0)
             {
                 await Clients.Caller.SendAsync("Esperar", jugador);
-                clsGameInfo.NumJugadores++;
+                clsGameInfo.NumJugadoresEnPartida++;
             }
-            else if (clsGameInfo.NumJugadores == 1)
+            else if (clsGameInfo.NumJugadoresEnPartida == 1)
             {
-                await Clients.Caller.SendAsync("Empezar", jugador);
-                clsGameInfo.NumJugadores++;
+                await Clients.Caller.SendAsync("ElegirPalabra", jugador);
+                clsGameInfo.NumJugadoresEnPartida++;
             }
             else
             {
                 await Clients.Caller.SendAsync("Espectador", jugador);
-                clsGameInfo.NumJugadores++;
+                clsGameInfo.NumJugadoresEnPartida++;
             }
 
         }
+
+        /// <summary>
+        /// Envía la palabra para adivinar al contrincante
+        /// </summary>
+        /// <param name="palabra"></param>
+        /// <returns></returns>
+        public async Task PalabraAleatoria(string palabra)
+        {
+            if (clsGameInfo.NumJugadoresListos == 0)
+            {
+                await Clients.All.SendAsync("EsperarPalabra", palabra);
+                clsGameInfo.NumJugadoresListos++;
+            }
+            else if (clsGameInfo.NumJugadoresListos == 1)
+            {
+                await Clients.All.SendAsync("EmpezarJuego", palabra);
+                clsGameInfo.NumJugadoresListos++;
+            }
+        }
+
 
         // TODO: decidir cómo va a ser la vista. Ver si le pasamos la imagen o los intentos
         // restantes del jugador contrincante 
@@ -51,7 +71,8 @@ namespace proyectoFinDeGradoAhorcado.Hubs
         public async Task FinDePartida(string mensaje)
         {
             await Clients.All.SendAsync("AvisarFinPartida", mensaje);
-            clsGameInfo.NumJugadores = 0;
+            clsGameInfo.NumJugadoresEnPartida = 0;
+            clsGameInfo.NumJugadoresListos = 0;
         }
     }
 }
