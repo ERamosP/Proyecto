@@ -15,7 +15,7 @@ namespace AhorcadoMAUI.Services
         /// <summary>
         /// Función que llama a la api, pide una palabra aleatoria y la devuelve
         /// Precondiciones: Ninguna
-        /// Postcondiciones: Si no encuentra ninguna palabra devuelve null. 
+        /// Postcondiciones: Si no encuentra ninguna palabra devuelve null.
         /// Si hay un error, lanza la axcepción correspondiente
         /// </summary>
         /// <returns>La palabra devuelta por la api</returns>
@@ -41,7 +41,7 @@ namespace AhorcadoMAUI.Services
                     palabraEncontrada.nombre = palabraEncontrada.nombre.ToLower();
 
                 }
-                else if (httpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+                else if (httpResponse.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                 {
                     palabraEncontrada = null;
                 }
@@ -52,5 +52,51 @@ namespace AhorcadoMAUI.Services
             }
             return palabraEncontrada;
         }
+
+
+        /// <summary>
+        /// Función que llama a la api, pide 5 palabras aleatorias y las devuelve
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Si no encuentra ninguna palabra devuelve null. 
+        /// Si hay un error, lanza la axcepción correspondiente
+        /// </summary>
+        /// <returns>La palabra devuelta por la api</returns>
+        public static async Task<List<clsPalabra>> get5Palabra5Aleatoria5()
+        {
+            HttpClient httpClient;
+            string json;
+            string uri = $"{clsUriBase.getUriBase()}api5palabras";
+            Uri miUri = new Uri(uri);
+            HttpResponseMessage httpResponse;
+            List<clsPalabra> palabrasEncontradas = new List<clsPalabra>();
+
+            httpClient = new HttpClient();
+            try
+            {
+                httpResponse = await httpClient.GetAsync(miUri);
+
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    json = await httpClient.GetStringAsync(miUri);
+                    httpClient.Dispose();
+                    palabrasEncontradas = JsonConvert.DeserializeObject<List<clsPalabra>>(json);
+                    for (int i = 0; i < palabrasEncontradas.Count; i++)
+                    {
+                        palabrasEncontradas[i].nombre = palabrasEncontradas[i].nombre.ToLower();
+                    }
+
+                }
+                else if (httpResponse.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    palabrasEncontradas = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return palabrasEncontradas;
+        }
+
     }
 }
