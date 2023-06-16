@@ -154,7 +154,8 @@ namespace AhorcadoMAUI.ViewModels
         }
 
         /// <summary>
-        /// Método que comprueba si se ha cumplido alguno de los requisitos necesarios para terminar la partida
+        /// Método que muestra al usuario un popup personalizado con su victoria o derrota.
+        /// Le da la opción de jugar de nuevo o salir del juego.
         /// </summary>
         private async Task mostrarPopUpFin()
         {

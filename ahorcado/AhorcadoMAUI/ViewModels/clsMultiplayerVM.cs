@@ -279,47 +279,12 @@ namespace AhorcadoMAUI.ViewModels
         #region Métodos
 
         /// <summary>
-        /// Método que comprueba si se ha cumplido alguno de los requisitos necesarios para terminar la partida
+        /// Método que muestra a ambos jugadores quién ha sido el ganador de la partida.
         /// </summary>
-        private async Task mostrarPopUpFin()
+        private async void mostrarPopUpFin()
         {
-            int alturaPopup = 0;
-
-            musicaFondo.Stop();
-
-            if (intentosRestantes == 0)
-            {
-
-                derrotaAudio.Play();
-                alturaPopup = 350;
-                imagen = "muerto.png";
-            }
-            else if (letrasRestantes == 0)
-            {
-                victoriaAudio.Play();
-                alturaPopup = 375;
-                imagen = "salvado.png";
-            }
-
-            var popup = new FinalPopUp(imagen, alturaPopup, palabraParaAdivinar.nombre);
-
-            var result = await App.Current.MainPage.ShowPopupAsync(popup);
-
-            if (result is bool boolResult)
-            {
-                if (boolResult)
-                {
-                    derrotaAudio.Stop();
-
-                    crearPartida();
-                }
-                else
-                {
-                    derrotaAudio.Stop();
-
-                    await Application.Current.MainPage.Navigation.PopToRootAsync();
-                }
-            }
+            
+            //popup fin del juego con un único botón para salir de la app 
 
         }
 
