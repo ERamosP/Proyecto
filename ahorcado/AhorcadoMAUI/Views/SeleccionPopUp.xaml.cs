@@ -9,11 +9,11 @@ public partial class SeleccionPopUp : Popup
 	{
 		InitializeComponent();
 
-		btn1.Text = palabras[0].nombre; 
+		btn1.Text = palabras[0].nombre.ToLower(); 
  
-		btn2.Text = palabras[1].nombre; 
+		btn2.Text = palabras[1].nombre.ToLower(); 
 
-		btn3.Text = palabras[2].nombre;
+		btn3.Text = palabras[2].nombre.ToLower();
 
         fondo.Size = new Size(300, 300);
 

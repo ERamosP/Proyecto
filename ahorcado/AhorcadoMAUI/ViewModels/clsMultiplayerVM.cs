@@ -28,7 +28,7 @@ namespace AhorcadoMAUI.ViewModels
         private string palabraEnviar;
         private List<clsPalabra> listaPalabras;
         /************************************/
-        private clsPalabra palabraParaAdivinar;
+        private clsPalabra palabraParaAdivinar = new clsPalabra();
         private StringBuilder adivinado; // ponemos un guión en cada posición
         private int letrasRestantes;// cuando llegue a 0 se ha adivinado la palabra y acaba el juego. El jugador no necesita verlo.
         private string lblAvisos;
@@ -42,7 +42,6 @@ namespace AhorcadoMAUI.ViewModels
         private readonly IAudioManager audio3;
         private readonly IAudioManager audio4;
         private readonly IAudioManager audio5;
-        IAudioPlayer musicaFondo;
         IAudioPlayer aciertoAudio;
         IAudioPlayer falloAudio;
         IAudioPlayer victoriaAudio;
@@ -98,22 +97,25 @@ namespace AhorcadoMAUI.ViewModels
             get { return intentosRestantes; }
         }
 
-        public bool EmpiezaJuego
-        {
-
-            get { return empiezaJuego; }
-
-        }
-
         #endregion
 
         #region Constructores
         public clsMultiplayerVM(IAudioManager audioManager, IAudioManager audioManager2, IAudioManager audioManager3, IAudioManager audioManager4, IAudioManager audioManager5)
         {
+            this.audio = audioManager;
+
+            this.audio2 = audioManager2;
+
+            this.audio3 = audioManager3;
+
+            this.audio4 = audioManager4;
+
+            this.audio5 = audioManager5;
+
             crearPartida();
 
             _connection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:5083/ahorcado")
+                .WithUrl("http://localhost:5083/ahorcado")
             .Build();
 
             _connection.On<clsJugador>("Esperar", esperarJugadores); // jugador 1
@@ -123,7 +125,7 @@ namespace AhorcadoMAUI.ViewModels
 
             _connection.On<string>("EmpezarJuego", recibirPalabra); // actualiza el tablero de ambos jugadores + cambia los turnos
             _connection.On<string>("Actualizar", actualizarInfoContrincante); // avisa del fin de la partida a todos los jugadores 
-            //_connection.On<string>("AvisarFinPartida", finPartida); // avisa del fin de la partida a todos los jugadores 
+            _connection.On<string>("AvisarFinPartida", finPartida); // avisa del fin de la partida a todos los jugadores 
 
             try
             {
@@ -162,17 +164,20 @@ namespace AhorcadoMAUI.ViewModels
             lblAvisos = $"¡Eres el {jugador.NombreJugador}! Esperando a otro jugador";
             jugadorEnPartida = jugador;
 
-            NotifyPropertyChanged(nameof(lblAvisos));
+
+            NotifyPropertyChanged(nameof(LblAvisos));
 
         }
         /// <summary>
         /// Método que completa la partida y muestra a los jugadores el listado de palabras. Selecciona una y la envía al otro jugador 
         /// </summary>
-        public async void partidaCompletada(clsJugador jugador)
+        public async Task partidaCompletada(clsJugador jugador)
         {
+            await palabraAleatoria();
+
             if (jugador.IdJugador == 1)
             {
-                palabraAleatoria();
+
                 var popup = new SeleccionPopUp(listaPalabras);
 
                 var result = await App.Current.MainPage.ShowPopupAsync(popup);
@@ -186,39 +191,46 @@ namespace AhorcadoMAUI.ViewModels
                 lblAvisos = $"¡Eres el {jugador.NombreJugador}!";
                 jugadorEnPartida = jugador;
 
-                palabraAleatoria();
+
                 var popup = new SeleccionPopUp(listaPalabras);
 
-                var result = await App.Current.MainPage.ShowPopupAsync(popup);
-                palabraEnviar = result.ToString();
+                await MainThread.InvokeOnMainThreadAsync(async () =>
+                {
+
+                    var result = await App.Current.MainPage.ShowPopupAsync(popup);
+                    palabraEnviar = result.ToString();
+                }
+                );
+
+
             }
 
             jugadorEnPartida.Listo = true;
+
             // le pasamos la palabra, cuando cree lo del popup lo cambio
             await _connection.InvokeCoreAsync("PalabraAleatoria", args: new[] { palabraEnviar });
-
-            NotifyPropertyChanged(nameof(lblAvisos));
+            lblAvisos = $"El otro tiene que adivinar {palabraEnviar}.";
+            NotifyPropertyChanged(nameof(LblAvisos));
         }
 
-
         /// <summary>
-        /// 
+        /// Método que le pasa al contrincante la palabra elegida para que adivine y te hace esperar a que el otro te mande la suya. 
         /// </summary>
+        /// <param name="palabra"></param>
         public void esperarPalabra(string palabra)
         {
-            if (jugadorEnPartida.Listo)
+            /*if (jugadorEnPartida.Listo)
             {
                 lblAvisos = $"El otro tiene que adivinar {palabra}.";
             }
-            else
-            {
-                palabraParaAdivinar.nombre = palabra;
+            else if(!jugadorEnPartida.Listo)
+            {*/
+            palabraParaAdivinar.nombre = palabra;
 
-                ponerAsteriscos();
-            }
+            ponerAsteriscos();
+            //}
 
-            NotifyPropertyChanged(nameof(lblAvisos));
-            // decirle al jugador listo que espere y al que está decidiendo aun le manda la palabra que debe adivinar 
+            NotifyPropertyChanged(nameof(LblAvisos));
         }
 
         /// <summary>
@@ -227,7 +239,7 @@ namespace AhorcadoMAUI.ViewModels
         /// <param name="palabra"></param>
         public void recibirPalabra(string palabra)
         {
-            if (jugadorEnPartida.Listo && string.IsNullOrEmpty(palabraParaAdivinar.nombre))
+            if (string.IsNullOrEmpty(palabraParaAdivinar.nombre))
             {
                 palabraParaAdivinar.nombre = palabra;
 
@@ -237,15 +249,66 @@ namespace AhorcadoMAUI.ViewModels
             empiezaJuego = true;
             lblAvisos = "Comienza la partida";
 
-            NotifyPropertyChanged(nameof(lblAvisos));
-            NotifyPropertyChanged(nameof(empiezaJuego));
-            // le manda la palabra al jugador que estaba esperando y comienza la partida de ambos
+            NotifyPropertyChanged(nameof(LblAvisos));
         }
 
+        /// <summary>
+        /// Método que recibe del Hub la info del contrincante y la actualiza en pantalla.
+        /// </summary>
+        /// <param name="info"></param>
         public void actualizarInfoContrincante(string info)
         {
             infoContrincante = info;
             NotifyPropertyChanged(nameof(InfoContrincante));
+        }
+
+        /// <summary>
+        /// Método que muestra a ambos jugadores quién ha sido el ganador de la partida.
+        /// </summary>
+        /// <param name="mensajeFin"></param>
+        private async Task finPartida(string mensaje)
+        {
+            /*int alturaPopup = 0;
+            
+
+            if (mensaje.StartsWith("Ha perdido"))
+            {
+
+                derrotaAudio.Play();
+                alturaPopup = 350;
+                imagen = "muerto.png";
+            }
+            else 
+            {
+                victoriaAudio.Play();
+                alturaPopup = 375;
+                imagen = "salvado.png";
+            }
+
+            //popup fin del juego con un único botón para salir de la app 
+
+            var popup = new FinalPopUp(imagen, alturaPopup, mensaje);
+
+            var result = await App.Current.MainPage.ShowPopupAsync(popup);
+
+            if (result is bool boolResult)
+            {
+                if (boolResult)
+                {
+
+                    crearPartida();
+                }
+                else
+                {
+
+                    await Application.Current.MainPage.Navigation.PopToRootAsync();
+                }
+            }*/
+
+            lblAvisos = mensaje;
+            NotifyPropertyChanged("LblAvisos");
+
+
         }
         #endregion
 
@@ -267,7 +330,7 @@ namespace AhorcadoMAUI.ViewModels
         {
             bool sePuedeEnviar = false;
 
-            if (!string.IsNullOrEmpty(inputJugador) && inputJugador.Length == 1 && Regex.IsMatch(inputJugador, @"^[A-z]"))
+            if (!string.IsNullOrEmpty(inputJugador) && inputJugador.Length == 1 && Regex.IsMatch(inputJugador, @"^[A-z]") && empiezaJuego == true)
             {
                 sePuedeEnviar = true;
             }
@@ -277,16 +340,6 @@ namespace AhorcadoMAUI.ViewModels
         #endregion
 
         #region Métodos
-
-        /// <summary>
-        /// Método que muestra a ambos jugadores quién ha sido el ganador de la partida.
-        /// </summary>
-        private async void mostrarPopUpFin()
-        {
-            
-            //popup fin del juego con un único botón para salir de la app 
-
-        }
 
         /// <summary>
         /// Método comprueba si la letra se encuentra en la palabra. 
@@ -337,8 +390,8 @@ namespace AhorcadoMAUI.ViewModels
                     intentosRestantes--;
                     actualizarImagen();
                     NotifyPropertyChanged("IntentosRestantes");
-                    infoContrincante = $"Al otro le quedan {intentosRestantes} intentos.";
-                    await _connection.InvokeCoreAsync("ActualizarImagenAhorcado", args: new[] { infoContrincante });
+                    //le mandamos nuestros intentos restantes al otro jugador
+                    await _connection.InvokeCoreAsync("ActualizarInfoContrincante", args: new[] { intentosRestantes.ToString() });
 
 
                 }
@@ -350,10 +403,18 @@ namespace AhorcadoMAUI.ViewModels
                 NotifyPropertyChanged("LetrasSeleccionadas");
 
 
-                if (intentosRestantes == 0 || letrasRestantes == 0)
-                {
-                    mostrarPopUpFin();
 
+                if (intentosRestantes == 0)
+                {
+                    juegoTerminado = true;
+
+                    await _connection.InvokeCoreAsync("FinDePartida", args: new[] {$"Ha perdido : {jugadorEnPartida.NombreJugador}" });
+                }
+                else if (letrasRestantes == 0)
+                {
+                    juegoTerminado = true;
+
+                    await _connection.InvokeCoreAsync("FinDePartida", args: new[] { $"Ha ganado : {jugadorEnPartida.NombreJugador}" });
 
                 }
 
@@ -369,13 +430,13 @@ namespace AhorcadoMAUI.ViewModels
         {
             empiezaJuego = false;
             juegoTerminado = false;
-            infoContrincante = "";
             crearAudios();
             intentosRestantes = 5;
             actualizarImagen();
             letrasSeleccionadas = "";
             lblAvisos = "";
             inputJugador = "";
+            infoContrincante = "5";
             enviarInputCommand = new DelegateCommand(enviarInputCommand_Executed, enviarInputCommand_CanExecute);
 
 
@@ -383,17 +444,16 @@ namespace AhorcadoMAUI.ViewModels
             NotifyPropertyChanged("LetrasSeleccionadas");
             NotifyPropertyChanged("LblAvisos");
             NotifyPropertyChanged("InputJugador");
+            NotifyPropertyChanged("InfoContrincante");
 
         }
 
         /// <summary>
         /// Método que realiza la llamada a la API y recibe un listado de palabras para que el jugador elija una que enviar al contrincante
         /// </summary>
-        private async void palabraAleatoria()
+        private async Task palabraAleatoria()
         {
 
-            // TODO: cambiar la app para que la llamada a la API se haga en el menú inicial y pase la palabra al VM
-            // así mostramos el error en el menú si no conecta con la API.
             try
             {
                 listaPalabras = await palabraService.get3PalabraAleatoria();
@@ -402,8 +462,6 @@ namespace AhorcadoMAUI.ViewModels
             {
                 lblAvisos = "Error de conexión";
             }
-
-
 
         }
 
@@ -415,7 +473,7 @@ namespace AhorcadoMAUI.ViewModels
 
             for (int i = 0; i < palabraParaAdivinar.nombre.Length; i++)
             {
-                adivinado.Append("*");
+                adivinado.Append("*"); //
             }
 
             NotifyPropertyChanged("Adivinado");
@@ -441,7 +499,6 @@ namespace AhorcadoMAUI.ViewModels
         public async void crearAudios()
         {
 
-            musicaFondo = audio.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.wav"));
 
             aciertoAudio = audio2.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("right.wav"));
 
@@ -451,7 +508,6 @@ namespace AhorcadoMAUI.ViewModels
 
             derrotaAudio = audio5.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("lose.wav"));
 
-            musicaFondo.Play();
         }
         #endregion
 

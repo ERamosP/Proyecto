@@ -54,7 +54,7 @@
 
             <Button 
             Style="{DynamicResource botonNaranjaStyle}"
-            Clicked="EnviarAModoSinglePlayer"
+            Clicked="EnviarAModoMultiPlayer"
             Text="Dos Jugadores"
             FontFamily="Montserrat"
             Margin="10"/>

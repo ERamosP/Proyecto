@@ -35,6 +35,12 @@ public partial class MenuJuego : ContentPage
         await App.Current.MainPage.Navigation.PushAsync(new SinglePlayer(audio,audio2,audio3,audio4,audio5));
     }
 
+    private async void EnviarAModoMultiPlayer(object sender, EventArgs e)
+    {
+
+        await App.Current.MainPage.Navigation.PushAsync(new MultiPlayer(audio, audio2, audio3, audio4, audio5));
+    }
+
     protected async override void OnAppearing()
     {
         player = audio.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.wav"));

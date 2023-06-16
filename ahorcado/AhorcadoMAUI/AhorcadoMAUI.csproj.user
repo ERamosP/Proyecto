@@ -14,6 +14,9 @@
     <MauiXaml Update="Views\FinalPopUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\MultiPlayer.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\SeleccionPopUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

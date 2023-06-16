@@ -80,15 +80,6 @@ namespace AhorcadoMAUI.Services
                     json = await httpClient.GetStringAsync(miUri);
                     httpClient.Dispose();
                     palabrasEncontradas = JsonConvert.DeserializeObject<List<clsPalabra>>(json);
-                    for (int i = 0; i < palabrasEncontradas.Count; i++)
-                    {
-                        palabrasEncontradas[i].nombre = palabrasEncontradas[i].nombre.ToLower();
-                    }
-
-                }
-                else if (httpResponse.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                {
-                    palabrasEncontradas = null;
                 }
             }
             catch (Exception ex)

@@ -184,13 +184,11 @@ namespace AhorcadoMAUI.ViewModels
             {
                 if (boolResult)
                 {
-                    derrotaAudio.Stop();
 
                     crearPartida();
                 }
                 else
                 {
-                    derrotaAudio.Stop();
 
                     await Application.Current.MainPage.Navigation.PopToRootAsync();
                 }

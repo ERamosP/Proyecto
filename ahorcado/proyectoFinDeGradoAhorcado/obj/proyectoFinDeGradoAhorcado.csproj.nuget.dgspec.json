@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj": {}
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\cmendoza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cmendoza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -70,24 +70,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\cmendoza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cmendoza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -130,24 +130,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj": {
+    "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj",
+        "projectUniqueName": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj",
         "projectName": "proyectoFinDeGradoAhorcado",
-        "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj",
-        "packagesPath": "C:\\Users\\cmendoza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\obj\\",
+        "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\proyectoFinDeGradoAhorcado.csproj",
+        "packagesPath": "C:\\Users\\slima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\proyectoFinDeGradoAhorcado\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cmendoza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -163,11 +163,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\DAL\\DAL.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\cmendoza\\Documents\\GitHub\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
+              "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\slima\\Desktop\\Proyecto\\Proyecto\\ahorcado\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -200,7 +200,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -278,3 +278,4 @@ C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\proyectoFinDeGradoAhorcado\
 C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\proyectoFinDeGradoAhorcado\obj\Debug\net6.0\proyectoFinDeGradoAhorcado.pdb
 C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\proyectoFinDeGradoAhorcado\obj\Debug\net6.0\proyectoFinDeGradoAhorcado.genruntimeconfig.cache
 C:\Users\cmendoza\Documents\GitHub\Proyecto\ahorcado\proyectoFinDeGradoAhorcado\obj\Debug\net6.0\ref\proyectoFinDeGradoAhorcado.dll
+C:\Users\slima\Desktop\Proyecto\Proyecto\ahorcado\proyectoFinDeGradoAhorcado\bin\Debug\net6.0\libman.json

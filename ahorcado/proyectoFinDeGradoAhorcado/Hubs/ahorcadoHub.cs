@@ -44,7 +44,7 @@ namespace proyectoFinDeGradoAhorcado.Hubs
         {
             if (clsGameInfo.NumJugadoresListos == 0)
             {
-                await Clients.All.SendAsync("EsperarPalabra", palabra);
+                await Clients.Others.SendAsync("EsperarPalabra", palabra);
                 clsGameInfo.NumJugadoresListos++;
             }
             else if (clsGameInfo.NumJugadoresListos == 1)
@@ -57,9 +57,9 @@ namespace proyectoFinDeGradoAhorcado.Hubs
 
         // TODO: decidir cómo va a ser la vista. Ver si le pasamos la imagen o los intentos
         // restantes del jugador contrincante 
-        public async Task ActualizarImagenAhorcado(string imagenAhorcadoSource)
+        public async Task ActualizarInfoContrincante(string infoContrincante)
         {
-            await Clients.Others.SendAsync("Actualizar", imagenAhorcadoSource);
+            await Clients.Others.SendAsync("Actualizar", infoContrincante);
         }
 
         /// <summary>
