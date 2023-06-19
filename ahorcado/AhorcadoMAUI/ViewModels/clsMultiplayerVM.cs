@@ -114,9 +114,24 @@ namespace AhorcadoMAUI.ViewModels
 
             crearPartida();
 
+            iniciarConexion();
+
+        }
+        #endregion
+
+        #region SignalR
+
+
+        private async void iniciarConexion()
+        {
+
             _connection = new HubConnectionBuilder()
-                .WithUrl("http://localhost:5083/ahorcado")
+            .WithUrl("https://ahorca2.azurewebsites.net/ahorcado")
             .Build();
+
+            //_connection = new HubConnectionBuilder()
+            //.WithUrl("http://localhost:5083/ahorcado")
+            //.Build();
 
             _connection.On<clsJugador>("Esperar", esperarJugadores); // jugador 1
             _connection.On<clsJugador>("ElegirPalabra", partidaCompletada); // jugador 2 + le avisa de que empieza la partida
@@ -129,20 +144,25 @@ namespace AhorcadoMAUI.ViewModels
 
             try
             {
-                _connection.StartAsync();
+
+                await _connection.StartAsync();
+
             }
             catch (Exception ex)
             {
                 lblAvisos = "Error de conexión, inténtelo de nuevo más tarde.";
-                NotifyPropertyChanged(nameof(lblAvisos));
+                NotifyPropertyChanged(nameof(LblAvisos));
+            }
+            if (_connection.State == HubConnectionState.Connected)
+            {
+
+                unirseALaPartida();
+
             }
 
-            unirseALaPartida();
 
         }
-        #endregion
 
-        #region SignalR
         /// <summary>
         /// Método que crea una nueva clase jugador e invoca el método del hub "UnirseAlJuego"
         /// </summary>
@@ -164,7 +184,7 @@ namespace AhorcadoMAUI.ViewModels
             lblAvisos = $"¡Eres el {jugador.NombreJugador}! Esperando a otro jugador";
             jugadorEnPartida = jugador;
 
-
+            NotifyPropertyChanged("JugadorEnPartida");
             NotifyPropertyChanged(nameof(LblAvisos));
 
         }
@@ -191,6 +211,7 @@ namespace AhorcadoMAUI.ViewModels
                 lblAvisos = $"¡Eres el {jugador.NombreJugador}!";
                 jugadorEnPartida = jugador;
 
+                NotifyPropertyChanged("JugadorEnPartida");
 
                 var popup = new SeleccionPopUp(listaPalabras);
 
@@ -215,26 +236,21 @@ namespace AhorcadoMAUI.ViewModels
 
         /// <summary>
         /// Método que le pasa al contrincante la palabra elegida para que adivine y te hace esperar a que el otro te mande la suya. 
+        /// El primero listo lo manda al que aún no está listo.
         /// </summary>
         /// <param name="palabra"></param>
         public void esperarPalabra(string palabra)
         {
-            /*if (jugadorEnPartida.Listo)
-            {
-                lblAvisos = $"El otro tiene que adivinar {palabra}.";
-            }
-            else if(!jugadorEnPartida.Listo)
-            {*/
             palabraParaAdivinar.nombre = palabra;
-
+            lblAvisos = "¡Comienza la partida!";
             ponerAsteriscos();
-            //}
 
             NotifyPropertyChanged(nameof(LblAvisos));
         }
 
         /// <summary>
-        /// Método que genera migrañas
+        /// Método que envía al contrincante la palabra elegida para que la adivine.
+        /// El segundo en estar listo lo manda al primero que está esperando. 
         /// </summary>
         /// <param name="palabra"></param>
         public void recibirPalabra(string palabra)
@@ -247,7 +263,7 @@ namespace AhorcadoMAUI.ViewModels
             }
 
             empiezaJuego = true;
-            lblAvisos = "Comienza la partida";
+            lblAvisos = "¡Comienza la partida!";
 
             NotifyPropertyChanged(nameof(LblAvisos));
         }
@@ -268,8 +284,8 @@ namespace AhorcadoMAUI.ViewModels
         /// <param name="mensajeFin"></param>
         private async Task finPartida(string mensaje)
         {
-            /*int alturaPopup = 0;
-            
+            int alturaPopup = 0;
+
 
             if (mensaje.StartsWith("Ha perdido"))
             {
@@ -278,7 +294,7 @@ namespace AhorcadoMAUI.ViewModels
                 alturaPopup = 350;
                 imagen = "muerto.png";
             }
-            else 
+            else
             {
                 victoriaAudio.Play();
                 alturaPopup = 375;
@@ -287,26 +303,25 @@ namespace AhorcadoMAUI.ViewModels
 
             //popup fin del juego con un único botón para salir de la app 
 
-            var popup = new FinalPopUp(imagen, alturaPopup, mensaje);
+            var popup = new MultiplayerFinalPopUp(imagen, alturaPopup, mensaje);
 
-            var result = await App.Current.MainPage.ShowPopupAsync(popup);
-
-            if (result is bool boolResult)
+            await MainThread.InvokeOnMainThreadAsync(async () =>
             {
-                if (boolResult)
+
+                var result = await App.Current.MainPage.ShowPopupAsync(popup);
+
+                if (result is bool boolResult)
                 {
+                    if (!boolResult)
+                    {
 
-                    crearPartida();
+                        await Application.Current.MainPage.Navigation.PopToRootAsync();
+                    }
                 }
-                else
-                {
 
-                    await Application.Current.MainPage.Navigation.PopToRootAsync();
-                }
-            }*/
+            }
+               );
 
-            lblAvisos = mensaje;
-            NotifyPropertyChanged("LblAvisos");
 
 
         }
@@ -352,7 +367,7 @@ namespace AhorcadoMAUI.ViewModels
 
             if (letrasSeleccionadas.Contains(inputJugador))
             {
-                lblAvisos = "Deja de repetir letras";
+                lblAvisos = "¡Cuidado con las letras repetidas!";
             }
             else
             {
@@ -408,7 +423,7 @@ namespace AhorcadoMAUI.ViewModels
                 {
                     juegoTerminado = true;
 
-                    await _connection.InvokeCoreAsync("FinDePartida", args: new[] {$"Ha perdido : {jugadorEnPartida.NombreJugador}" });
+                    await _connection.InvokeCoreAsync("FinDePartida", args: new[] { $"Ha perdido : {jugadorEnPartida.NombreJugador}" });
                 }
                 else if (letrasRestantes == 0)
                 {
@@ -473,7 +488,7 @@ namespace AhorcadoMAUI.ViewModels
 
             for (int i = 0; i < palabraParaAdivinar.nombre.Length; i++)
             {
-                adivinado.Append("*"); //
+                adivinado.Append("*");
             }
 
             NotifyPropertyChanged("Adivinado");

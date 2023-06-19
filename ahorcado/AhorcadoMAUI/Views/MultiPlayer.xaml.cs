@@ -50,7 +50,7 @@ public partial class MultiPlayer : ContentPage
     protected async override void OnDisappearing()
     {
 
-        player.Stop();
+        //player.Stop();
 
         base.OnDisappearing();
     }

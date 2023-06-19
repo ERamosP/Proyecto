@@ -11,6 +11,9 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="Views\MultiplayerFinalPopUp.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\FinalPopUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

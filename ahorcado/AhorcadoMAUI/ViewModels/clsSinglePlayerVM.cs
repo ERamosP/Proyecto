@@ -208,7 +208,7 @@ namespace AhorcadoMAUI.ViewModels
 
             if(letrasSeleccionadas.Contains(inputJugador))
             {
-                lblAvisos = "Deja de repetir letras";
+                lblAvisos = "¡Cuidado con las letras repetidas!";
             }
             else
             {

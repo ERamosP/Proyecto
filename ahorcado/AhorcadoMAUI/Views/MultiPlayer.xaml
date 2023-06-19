@@ -38,6 +38,15 @@
 
             </Border>
 
+            <Label 
+                Text="{Binding JugadorEnPartida.NombreJugador}" 
+                TextColor="{DynamicResource grisito}" 
+                HorizontalOptions="Center" 
+                FontFamily="Montserrat"
+                FontAttributes="Bold"
+                FontSize="20" 
+                Margin="0,70,0,0"/>
+
             <Border 
             BackgroundColor="{StaticResource naranjito}"
             Stroke="{StaticResource naranjito}"
@@ -70,14 +79,6 @@
 
 
         <VerticalStackLayout>
-
-            <!--<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Label Text="Número de intentos restantes :" TextColor="Red" HorizontalOptions="End" Margin="0,20,40,0" FontSize="20"/>
-            <Label Text="{Binding IntentosRestantes}" TextColor="Red" HorizontalOptions="End" Margin="0,20,20,0" FontSize="20"/>
-        </Grid>-->
 
             <Image 
             Source="{Binding Imagen}" 

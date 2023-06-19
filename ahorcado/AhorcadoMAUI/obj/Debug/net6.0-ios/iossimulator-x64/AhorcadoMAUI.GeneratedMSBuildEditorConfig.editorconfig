@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Views.MultiPl
 build_metadata.AdditionalFiles.TargetPath = Views\MultiPlayer.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MultiPlayer.xaml
 
+[C:/Users/slima/Desktop/Proyecto/Proyecto/ahorcado/AhorcadoMAUI/Views/MultiplayerFinalPopUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Views.MultiplayerFinalPopUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MultiplayerFinalPopUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MultiplayerFinalPopUp.xaml
+
 [C:/Users/slima/Desktop/Proyecto/Proyecto/ahorcado/AhorcadoMAUI/Views/SeleccionPopUp.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AhorcadoMAUI.Views.SeleccionPopUp.xaml

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7b10ab38-8cdf-4f21-ab75-980eb11123d2/resourceGroups/Ahorcado/providers/Microsoft.Web/sites/Ahorca2",
+    "appService.deploySubpath": "proyectoFinDeGradoAhorcado\\bin\\Publish"
+}

@@ -12,7 +12,7 @@ namespace Entidades
         #region Atributos
 
         private int idJugador;
-        private string nomreJugador;
+        private string nombreJugador;
         private bool listo;
 
         #endregion
@@ -26,8 +26,8 @@ namespace Entidades
 
         public string NombreJugador
         {
-            get { return nomreJugador; }
-            set { nomreJugador = value; }
+            get { return nombreJugador; }
+            set { nombreJugador = value; }
         }
 
         public bool Listo {
@@ -43,10 +43,10 @@ namespace Entidades
 
         }
 
-        public clsJugador(int idJugador, string nomreJugador, bool listo)
+        public clsJugador(int idJugador, string nombreJugador, bool listo)
         {
             this.idJugador = idJugador;
-            this.nomreJugador = nomreJugador;
+            this.nombreJugador = nombreJugador;
             this.listo = listo;
         }
 

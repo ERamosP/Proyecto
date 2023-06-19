@@ -11,7 +11,7 @@ namespace AhorcadoMAUI.Services
         public static string getUriBase()
         {
             //TODO: Poner la uri de la api
-            return "http://localhost:5083/api/";
+            return "https://ahorca2.azurewebsites.net/api/";
         }
     }
 }
