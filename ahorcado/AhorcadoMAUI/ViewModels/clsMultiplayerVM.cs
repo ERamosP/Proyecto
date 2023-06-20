@@ -21,6 +21,7 @@ namespace AhorcadoMAUI.ViewModels
 
         #region Atributos
         private clsJugador jugadorEnPartida;
+        private bool inicioEmitido = false;
         private bool empiezaJuego;
         private bool juegoTerminado;
         private string infoContrincante;
@@ -195,16 +196,9 @@ namespace AhorcadoMAUI.ViewModels
         {
             await palabraAleatoria();
 
-            if (jugador.IdJugador == 1)
+            if (jugadorEnPartida.IdJugador != 1)
             {
 
-                var popup = new SeleccionPopUp(listaPalabras);
-
-                var result = await App.Current.MainPage.ShowPopupAsync(popup);
-                palabraEnviar = result.ToString();
-            }
-            else
-            {
                 jugador.IdJugador = 2;
                 jugador.NombreJugador = "Jugador 2";
                 jugador.Listo = false;
@@ -212,9 +206,12 @@ namespace AhorcadoMAUI.ViewModels
                 jugadorEnPartida = jugador;
 
                 NotifyPropertyChanged("JugadorEnPartida");
+            }
+               
+            var popup = new SeleccionPopUp(listaPalabras);
 
-                var popup = new SeleccionPopUp(listaPalabras);
-
+            if (!inicioEmitido)
+            {
                 await MainThread.InvokeOnMainThreadAsync(async () =>
                 {
 
@@ -223,15 +220,17 @@ namespace AhorcadoMAUI.ViewModels
                 }
                 );
 
+                inicioEmitido = true;
 
             }
 
             jugadorEnPartida.Listo = true;
-
+            Console.Write(this.palabraEnviar);
             // le pasamos la palabra, cuando cree lo del popup lo cambio
             await _connection.InvokeCoreAsync("PalabraAleatoria", args: new[] { palabraEnviar });
             lblAvisos = $"El otro tiene que adivinar {palabraEnviar}.";
             NotifyPropertyChanged(nameof(LblAvisos));
+            NotifyPropertyChanged(nameof(palabraEnviar));
         }
 
         /// <summary>
@@ -322,7 +321,7 @@ namespace AhorcadoMAUI.ViewModels
             }
                );
 
-
+            jugadorEnPartida = new clsJugador();
 
         }
         #endregion
